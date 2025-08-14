@@ -22,16 +22,14 @@ pipeline {
         }
 
         stage('Deploy to cPanel via FTP') {
-            steps {
-                withCredentials([usernamePassword(credentialsId: 'cpanel-ftp-creds', usernameVariable: 'FTP_USER', passwordVariable: 'FTP_PASS')]) {
-                    sh '''
-                        lftp -u "$FTP_USER","$FTP_PASS" ftp.digitalpartner.lk <<EOF
-                        mirror -R dist /mmsalmanfaris
-                        bye
-EOF
-                    '''
-                }
-            }
+    steps {
+        withCredentials([usernamePassword(credentialsId: 'cpanel-ftp-creds', usernameVariable: 'FTP_USER', passwordVariable: 'FTP_PASS')]) {
+            sh '''
+                lftp -u "$FTP_USER","$FTP_PASS" -e "set ssl:verify-certificate no; mirror -R dist /mmsalmanfaris.engineer; bye" ftp.digitalpartner.lk
+            '''
         }
+    }
+}
+
     }
 }
