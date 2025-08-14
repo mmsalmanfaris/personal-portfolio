@@ -1,28 +1,36 @@
 pipeline {
     agent any
 
-    environment {
-        FTP_HOST = '49.12.121.200'
-        FTP_USER = 'digital6'
-        FTP_PASS = 'YOUR_Cpanel_PASSWORD'
-    }
-
     stages {
-        stage('Build') {
+        stage('Version') {
+            steps {
+                sh 'node --version'
+                sh 'npm --version'
+            }
+        }
+
+        stage('Install Dependencies') {
             steps {
                 sh 'npm install'
+            }
+        }
+
+        stage('Build') {
+            steps {
                 sh 'npm run build'
             }
         }
 
-        stage('Deploy') {
+        stage('Deploy to cPanel via FTP') {
             steps {
-                sh '''
-                    lftp -u $FTP_USER,$FTP_PASS $FTP_HOST <<EOF
-                    mirror -R dist /public_html
-                    bye
+                withCredentials([usernamePassword(credentialsId: 'cpanel-ftp-creds', usernameVariable: 'FTP_USER', passwordVariable: 'FTP_PASS')]) {
+                    sh '''
+                        lftp -u "$FTP_USER","$FTP_PASS" 49.12.121.200 <<EOF
+                        mirror -R dist /mmsalmanfaris
+                        bye
 EOF
-                '''
+                    '''
+                }
             }
         }
     }
