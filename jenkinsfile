@@ -1,23 +1,43 @@
-pipeline{
+pipeline {
     agent any
 
-
-    stages{
-        stage('Version'){
-            steps{
-                    sh 'node --version'
-                    sh 'npm --version'
+    stages {
+        stage('Version') {
+            steps {
+                sh 'node --version'
+                sh 'npm --version'
             }
         }
-        stage('Dependency'){
-            steps{
+
+        stage('Install Dependencies') {
+            steps {
                 sh 'npm install'
             }
         }
 
-        stage('Build'){
-            steps{
+        stage('Build') {
+            steps {
                 sh 'npm run build'
+            }
+        }
+
+        stage('Deploy to cPanel') {
+            steps {
+                ftpPublisher alwaysPublishFromMaster: true,
+                continueOnError: false,
+                failOnError: true,
+                publishers: [
+                    [
+                        configName: 'cpanel-ftp',
+                        transfers: [
+                            [
+                                remoteDirectory: '/', 
+                                sourceFiles: 'dist/**'
+                            ]
+                        ],
+                        verbose: true
+                    ]
+                ]
             }
         }
     }
