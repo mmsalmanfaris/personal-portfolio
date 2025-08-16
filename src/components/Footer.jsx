@@ -5,7 +5,7 @@ export default function Footer() {
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
                 {/* Left side */}
                 <p className="text-sm mb-4 md:mb-0">
-                    &copy; {new Date().getFullYear()} Salman Faris. All rights reserved.
+                    &copy; {new Date().getFullYear()} mmsalmanfaris. All rights reserved.
                 </p>
 
                 {/* Right side - social links */}

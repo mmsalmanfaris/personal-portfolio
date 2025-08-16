@@ -39,7 +39,7 @@ export default function Hero() {
                 {/* Right: Illustration / Image */}
                 <div className="flex-1 flex justify-center">
                     <img
-                        src="/hero-devops.png" // Replace with your image or illustration
+                        src="/profile.jpg" // Replace with your image or illustration
                         alt="DevOps Illustration"
                         className="w-full max-w-md rounded-lg shadow-lg"
                     />

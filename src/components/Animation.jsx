@@ -16,7 +16,7 @@ export default function CICDWorkflow() {
     return (
         <div className="flex justify-center items-center gap-8 flex-wrap relative">
             {stages.map((stage, index) => (
-                <div key={index} className="flex flex-col items-center relative bg-gray-950">
+                <div key={index} className="flex flex-col items-center relative bg-gray-900">
                     <div className="relative w-20 h-20">
                         <svg className="w-20 h-20 rotate-[0deg]">
                             {/* Background Circle */}

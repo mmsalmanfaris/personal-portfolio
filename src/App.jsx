@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-gray-950 text-white font-sans scroll-smooth min-h-screen">
+    <div className="bg-gray-900 text-white font-sans scroll-smooth min-h-screen">
       {!showPortfolio ? (
         // Full-screen animation section
         <div className="flex flex-col items-center justify-center min-h-screen">
