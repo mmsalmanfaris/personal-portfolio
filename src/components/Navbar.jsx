@@ -6,7 +6,6 @@ export default function Navbar() {
 
     const navLinks = [
         { name: "Home", href: "#home" },
-        { name: "About", href: "#about" },
         { name: "Skills", href: "#skills" },
         { name: "Projects", href: "#projects" },
         { name: "Experience", href: "#experience" },
@@ -20,8 +19,8 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo / Name */}
-                    <a href="#home" className="text-xl font-bold text-cyan-400">
-                        SalmanFaris.dev
+                    <a href="#home" className="text-xl font-bold text-white">
+                        MM Salman Faris
                     </a>
 
                     {/* Desktop Menu */}
@@ -30,7 +29,7 @@ export default function Navbar() {
                             <a
                                 key={link.name}
                                 href={link.href}
-                                className="hover:text-cyan-400 transition-colors duration-200"
+                                className="font-medium hover:text-cyan-400 transition-colors duration-200"
                             >
                                 {link.name}
                             </a>
