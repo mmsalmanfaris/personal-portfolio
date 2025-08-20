@@ -1,17 +1,19 @@
 // Hero.jsx
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+
 export default function Hero() {
     return (
         <section
             id="home"
             className="bg-gray-900 text-white min-h-screen flex items-center"
         >
-            <div className="max-w-6xl mx-auto px-6 sm:px-12 lg:px-24 flex flex-col md:flex-row items-center gap-10">
+            <div className="max-w-6xl mx-auto  flex flex-col md:flex-row items-center gap-10">
                 {/* Left: Text */}
                 <div className="flex-1">
-                    <h1 className="text-4xl sm:text-5xl font-bold text-cyan-400 mb-4">
+                    <h1 className="text-4xl sm:text-5xl font-bold text-cyan-400 mb-8">
                         Hi, I’m Salman Faris
                     </h1>
-                    <p className="text-gray-300 text-lg sm:text-xl mb-6">
+                    <p className="text-gray-300 text-lg sm:text-xl mb-8">
                         I’m a <span className="text-white font-semibold">DevOps Engineer & SRE</span>
                         who builds scalable, automated, and resilient cloud systems.
                         Passionate about CI/CD, Kubernetes, Terraform, and cloud automation.
@@ -19,25 +21,49 @@ export default function Hero() {
 
                     {/* Call to Action Buttons */}
                     <div className="flex flex-wrap gap-4">
-                        <a
-                            href="#contact"
-                            className="bg-cyan-500 hover:bg-cyan-400 text-black font-semibold py-3 px-6 rounded-lg transition duration-200"
-                        >
-                            Contact Me
-                        </a>
+                        {/* Resume Button */}
                         <a
                             href="/resume.pdf" // Replace with your resume path
                             target="_blank"
+                            rel="noopener noreferrer"
                             className="border border-cyan-400 hover:bg-cyan-400 hover:text-black text-cyan-400 font-semibold py-3 px-6 rounded-lg transition duration-200"
                         >
                             Download Resume
                         </a>
+
+                        {/* Social Icons */}
+                        <div className="flex gap-4 text-cyan-400 text-2xl">
+                            <a
+                                href="https://github.com/yourusername"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className=" border-cyan-400 hover:bg-cyan-400 hover:text-black transition duration-200 border px-2 py-3 rounded-lg"
+                            >
+                                <FaGithub />
+                            </a>
+                            <a
+                                href="https://linkedin.com/in/yourusername"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className=" border-cyan-400 hover:bg-cyan-400 hover:text-black transition duration-200 border px-2 py-3 rounded-lg"
+                            >
+                                <FaLinkedin />
+                            </a>
+                            <a
+                                href="https://twitter.com/yourusername"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className=" border-cyan-400 hover:bg-cyan-400 hover:text-black transition duration-200 border px-2 py-3 rounded-lg"
+                            >
+                                <FaTwitter />
+                            </a>
+                        </div>
                     </div>
 
                 </div>
 
                 {/* Right: Illustration / Image */}
-                <div className="flex-1 flex justify-center">
+                <div className="flex-1 flex justify-end">
                     <img
                         src="/profile.jpg" // Replace with your image or illustration
                         alt="DevOps Illustration"
