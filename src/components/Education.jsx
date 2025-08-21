@@ -5,14 +5,14 @@ export default function Career() {
 
     const educationData = [
         {
-            title: "BSc in Computer Science",
-            institution: "University of Colombo",
-            year: "2020 - 2023",
+            title: "BEng in Software Engineering",
+            institution: "London Metropolitan University",
+            year: "2023 Jan - 2025 Aug",
             details: [
                 "Focused on Cloud Computing, DevOps, and Software Engineering",
-                "Graduated with First Class Honors",
+                "Graduated with First Class Honours",
             ],
-        },
+        }
     ];
 
     const experienceData = [
@@ -25,31 +25,21 @@ export default function Career() {
                 "Managed Kubernetes clusters on AWS EKS with automated scaling and monitoring.",
                 "Created Infrastructure as Code with Terraform for multi-cloud deployments.",
             ],
-        },
-        {
-            title: "Cloud & Infrastructure Intern",
-            company: "CloudX Labs",
-            period: "Aug 2022 – Dec 2022",
-            details: [
-                "Worked on containerizing microservices using Docker.",
-                "Automated server provisioning using Ansible.",
-                "Monitored systems with Prometheus and Grafana.",
-            ],
-        },
+        }
     ];
 
     const certificationData = [
         {
-            title: "Certified Kubernetes Administrator (CKA)",
-            institution: "The Linux Foundation",
+            title: "Github Foundation",
+            institution: "Github",
             year: "2024",
             details: [
                 "Hands-on expertise in Kubernetes deployment, scaling, and security",
             ],
         },
         {
-            title: "AWS Certified Solutions Architect – Associate",
-            institution: "Amazon Web Services",
+            title: "Google Cyber Security Foundation",
+            institution: "Google",
             year: "2023",
             details: [
                 "Specialized in designing highly available, cost-efficient cloud architectures",
