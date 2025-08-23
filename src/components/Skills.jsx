@@ -6,17 +6,18 @@ import { LiaJenkins } from "react-icons/lia";
 
 export default function Skills() {
     const skills = [
-        { name: "Linux", level: "Advanced", icon: <VscTerminalLinux className="text-white w-10 h-10" /> },
-        { name: "Python", level: "Advanced", icon: <FaPython className="text-white w-10 h-10" /> },
-        { name: "Docker", level: "Expert", icon: <FaDocker className="text-white w-10 h-10" /> },
-        { name: "Kubernetes", level: "Advanced", icon: <SiKubernetes className="text-white w-10 h-10" /> },
-        { name: "AWS Cloud", level: "Advanced", icon: <FaAws className="text-white w-10 h-10" /> },
-        { name: "Azure Cloud", level: "Intermediate", icon: <VscAzure className="text-white w-10 h-10" /> },
-        { name: "Terraform", level: "Advanced", icon: <SiTerraform className="text-white w-10 h-10" /> },
-        { name: "Jenkins", level: "Advanced", icon: <LiaJenkins className="text-white w-10 h-10" /> },
-        { name: "Ansible", level: "Intermediate", icon: <SiAnsible className="text-white w-10 h-10" /> },
-        { name: "Prometheus & Grafana", level: "Intermediate", icon: <SiPrometheus className="text-white w-10 h-10" /> },
+        { name: "Linux", color: "#FCC624", icon: <VscTerminalLinux className="w-10 h-10" /> },
+        { name: "Python", color: "#3776AB", icon: <FaPython className="w-10 h-10" /> },
+        { name: "Docker", color: "#2496ED", icon: <FaDocker className="w-10 h-10" /> },
+        { name: "Kubernetes", color: "#326CE5", icon: <SiKubernetes className="w-10 h-10" /> },
+        { name: "AWS Cloud", color: "#FF9900", icon: <FaAws className="w-10 h-10" /> },
+        { name: "Azure Cloud", color: "#0078D4", icon: <VscAzure className="w-10 h-10" /> },
+        { name: "Terraform", color: "#7B42BC", icon: <SiTerraform className="w-10 h-10" /> },
+        { name: "Jenkins", color: "#D24939", icon: <LiaJenkins className="w-10 h-10" /> },
+        { name: "Ansible", color: "#EE0000", icon: <SiAnsible className="w-10 h-10" /> },
+        { name: "Prometheus & Grafana", color: "#E6522C", icon: <SiPrometheus className="w-10 h-10" /> },
     ];
+
 
     return (
         <section
@@ -31,12 +32,14 @@ export default function Skills() {
                     {skills.map((skill, index) => (
                         <div
                             key={index}
-                            className="bg-gray-800 p-4 rounded-lg shadow transition-transform transform hover:shadow-white hover:border-1 duration-300 flex flex-col items-center"
+                            className="bg-gray-800 p-4 rounded-lg shadow transition-transform transform hover:scale-105 duration-300 flex flex-col items-center"
                         >
-                            {skill.icon}
+                            <div style={{ color: skill.color }} className="w-10 h-10">
+                                {skill.icon}
+                            </div>
                             <p className="font-semibold text-white mt-2 mb-1">{skill.name}</p>
-                            {/* <p className="text-sm text-gray-400">{skill.level}</p> */}
                         </div>
+
 
                     ))}
                 </div>
