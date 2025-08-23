@@ -30,6 +30,14 @@ export default function Career() {
 
     const certificationData = [
         {
+            title: "Microsoft Certified: Azure Fundamentals",
+            institution: "Microsoft",
+            year: "2025",
+            details: [
+                "Hands-on expertise in Kubernetes deployment, scaling, and security",
+            ],
+        },
+        {
             title: "Github Foundation",
             institution: "Github",
             year: "2024",
@@ -42,7 +50,7 @@ export default function Career() {
             institution: "Google",
             year: "2023",
             details: [
-                "Specialized in designing highly available, cost-efficient cloud architectures",
+                "Specialised in designing highly available, cost-efficient cloud architectures",
             ],
         },
     ];
