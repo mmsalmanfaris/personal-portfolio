@@ -23,7 +23,7 @@ export default function Hero() {
                     <div className="flex flex-wrap gap-4">
                         {/* Resume Button */}
                         <a
-                            href="/resume.pdf" // Replace with your resume path
+                            href="/resume.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="border border-cyan-400 hover:bg-cyan-400 hover:text-black text-cyan-400 font-semibold py-3 px-6 rounded-lg transition duration-200"
@@ -65,8 +65,8 @@ export default function Hero() {
                 {/* Right: Illustration / Image */}
                 <div className="flex-1 flex justify-end">
                     <img
-                        src="/profile.jpg" // Replace with your image or illustration
-                        alt="DevOps Illustration"
+                        src="/profile.webp"
+                        alt="MM Salman Faris Image"
                         className="w-full max-w-md rounded-lg shadow-lg"
                     />
                 </div>
