@@ -6,16 +6,16 @@ import { LiaJenkins } from "react-icons/lia";
 
 export default function Skills() {
     const skills = [
-        { name: "Linux", color: "#FCC624", icon: <VscTerminalLinux className="w-10 h-10" /> },
-        { name: "Python", color: "#3776AB", icon: <FaPython className="w-10 h-10" /> },
-        { name: "Docker", color: "#2496ED", icon: <FaDocker className="w-10 h-10" /> },
-        { name: "Kubernetes", color: "#326CE5", icon: <SiKubernetes className="w-10 h-10" /> },
-        { name: "AWS Cloud", color: "#FF9900", icon: <FaAws className="w-10 h-10" /> },
-        { name: "Azure Cloud", color: "#0078D4", icon: <VscAzure className="w-10 h-10" /> },
-        { name: "Terraform", color: "#7B42BC", icon: <SiTerraform className="w-10 h-10" /> },
-        { name: "Jenkins", color: "#D24939", icon: <LiaJenkins className="w-10 h-10" /> },
-        { name: "Ansible", color: "#EE0000", icon: <SiAnsible className="w-10 h-10" /> },
-        { name: "Prometheus & Grafana", color: "#E6522C", icon: <SiPrometheus className="w-10 h-10" /> },
+        { name: "Linux", icon: <VscTerminalLinux className="w-10 h-10" /> },
+        { name: "Python", icon: <FaPython className="w-10 h-10" /> },
+        { name: "Docker", icon: <FaDocker className="w-10 h-10" /> },
+        { name: "Kubernetes", icon: <SiKubernetes className="w-10 h-10" /> },
+        { name: "AWS Cloud", icon: <FaAws className="w-10 h-10" /> },
+        { name: "Azure Cloud", icon: <VscAzure className="w-10 h-10" /> },
+        { name: "Terraform", icon: <SiTerraform className="w-10 h-10" /> },
+        { name: "Jenkins", icon: <LiaJenkins className="w-10 h-10" /> },
+        { name: "Ansible", icon: <SiAnsible className="w-10 h-10" /> },
+        { name: "Prometheus Stack", icon: <SiPrometheus className="w-10 h-10" /> },
     ];
 
 

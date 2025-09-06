@@ -5,6 +5,12 @@ export default function Career() {
 
     const certificationData = [
         {
+            title: "Introduction to Linux",
+            institution: "The Linux Foundation",
+            year: "2025",
+            image: "/career/linux-foundation.svg"
+        },
+        {
             title: "Microsoft Certified: Azure Fundamentals",
             institution: "Microsoft",
             year: "2025",
@@ -14,13 +20,13 @@ export default function Career() {
             title: "Github Foundation",
             institution: "Github",
             year: "2024",
-            image: "/career/github-foundation.png"
+            image: "/career/github-foundation.svg"
         },
         {
             title: "Google Cyber Security Foundation",
             institution: "Google",
             year: "2023",
-            image: "/career/google-cybersecurity.png"
+            image: "/career/google-cybersecurity.svg"
         },
     ];
 
@@ -91,7 +97,7 @@ export default function Career() {
                                 <img
                                     src={item.image}
                                     alt={item.title}
-                                    className="w-25 h-25 object-contain rounded-lg bg-white p-2 shadow-sm"
+                                    className="w-25 h-25 object-contain rounded-lg bg-white p-1 shadow-sm"
                                 />
 
                                 {/* Content */}
