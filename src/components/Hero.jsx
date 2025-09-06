@@ -1,5 +1,5 @@
 // Hero.jsx
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 export default function Hero() {
     return (
@@ -34,7 +34,7 @@ export default function Hero() {
                         {/* Social Icons */}
                         <div className="flex gap-4 text-cyan-400 text-2xl">
                             <a
-                                href="https://github.com/yourusername"
+                                href="https://github.com/mmsalmanfaris"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className=" border-cyan-400 hover:bg-cyan-400 hover:text-black transition duration-200 border px-2 py-3 rounded-lg"
@@ -42,7 +42,7 @@ export default function Hero() {
                                 <FaGithub />
                             </a>
                             <a
-                                href="https://linkedin.com/in/yourusername"
+                                href="https://www.linkedin.com/in/mmsalmanfaris/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className=" border-cyan-400 hover:bg-cyan-400 hover:text-black transition duration-200 border px-2 py-3 rounded-lg"
@@ -55,7 +55,7 @@ export default function Hero() {
                                 rel="noopener noreferrer"
                                 className=" border-cyan-400 hover:bg-cyan-400 hover:text-black transition duration-200 border px-2 py-3 rounded-lg"
                             >
-                                <FaTwitter />
+                                <FaFacebook />
                             </a>
                         </div>
                     </div>
