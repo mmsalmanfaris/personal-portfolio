@@ -7,7 +7,7 @@ export default function Projects() {
                 "Built a cloud-connected IoT parking system using FastAPI, ESP32, and Kubernetes with automated scaling and monitoring.",
             tech: ["FastAPI", "ESP32", "Kubernetes", "Docker"],
             github: "https://github.com/mmsalmanfaris/Automated-Parking-System",
-            live: "#",
+            image: "/projects/parking.webp",
         },
         {
             name: "CI/CD Pipeline Setup",
@@ -15,7 +15,7 @@ export default function Projects() {
                 "Designed and implemented a complete CI/CD pipeline using GitHub Actions and Terraform for a multi-service application.",
             tech: ["GitHub Actions", "Terraform", "Docker", "AWS"],
             github: "https://github.com/mmsalmanfaris/CI-CD-Pipeline",
-            live: "#",
+            image: "/projects/cicd.webp",
         },
         {
             name: "Cloud Resource Monitor",
@@ -23,7 +23,31 @@ export default function Projects() {
                 "Developed a full-stack system monitoring tool with FastAPI backend and React frontend for real-time system metrics visualization.",
             tech: ["FastAPI", "React", "Tailwind CSS", "Prometheus"],
             github: "https://github.com/mmsalmanfaris/System-Monitor",
-            live: "#",
+            image: "/projects/monitor.webp",
+        },
+        {
+            name: "Microservices Telemetry",
+            description:
+                "Deployed a telemetry project with 12 microservices, Kubernetes, Ingress, and AWS Route 53 custom domain setup.",
+            tech: ["Kubernetes", "AWS", "Ingress", "Docker"],
+            github: "https://github.com/mmsalmanfaris/Telemetry-Microservices",
+            image: "/projects/microservices.webp",
+        },
+        {
+            name: "Phone Cloud",
+            description:
+                "Turned an Android phone into a file-sharing cloud server with Ubuntu, Tailscale, and GitHub automation.",
+            tech: ["Ubuntu", "Tailscale", "GitHub", "SSH"],
+            github: "https://github.com/mmsalmanfaris/Phone-Cloud",
+            image: "/projects/phonecloud.webp",
+        },
+        {
+            name: "Portfolio Website",
+            description:
+                "Built a modern, responsive portfolio using React, Tailwind CSS, and shadcn UI to showcase DevOps projects.",
+            tech: ["React", "Tailwind CSS", "shadcn/ui"],
+            github: "https://github.com/mmsalmanfaris/portfolio",
+            image: "/projects/portfolio.webp",
         },
     ];
 
@@ -43,6 +67,14 @@ export default function Projects() {
                             key={index}
                             className="bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition duration-200 flex flex-col justify-between"
                         >
+                            {/* Project Image */}
+                            <img
+                                src={project.image}
+                                alt={project.name}
+                                className="w-full h-40 object-cover rounded-md mb-4"
+                            />
+
+                            {/* Project Info */}
                             <div>
                                 <h3 className="text-xl font-semibold text-white mb-2">
                                     {project.name}
@@ -60,25 +92,31 @@ export default function Projects() {
                                 </div>
                             </div>
 
-                            <div className="flex justify-between mt-auto">
+                            {/* GitHub Link */}
+                            <div className="flex mt-auto">
                                 <a
                                     href={project.github}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-cyan-400 hover:underline text-sm"
+                                    className="text-cyan-400 text-sm inline-flex items-center group"
                                 >
                                     GitHub
-                                </a>
-                                {project.live !== "#" && (
-                                    <a
-                                        href={project.live}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-cyan-400 hover:underline text-sm"
+                                    <svg
+                                        className="ml-2 w-4 h-4 transition-transform transform group-hover:translate-x-1"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        aria-hidden="true"
                                     >
-                                        Live Demo
-                                    </a>
-                                )}
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                        />
+                                    </svg>
+                                </a>
                             </div>
                         </div>
                     ))}

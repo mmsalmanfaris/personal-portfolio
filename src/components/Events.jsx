@@ -29,7 +29,7 @@ export default function Events() {
             title: "How to become a MLSA",
             role: "Hands-on Lab",
             date: "December 2024",
-            image: "/event/fourth_event.jpeg"
+            image: "/event/fourth_event.jpg"
         },
         {
             title: "Azure Services and Business Models",
