@@ -36,6 +36,12 @@ export default function Career() {
             institution: "London Metropolitan University",
             year: "2023 Jan - 2025 Aug",
             image: "/career/lmu.svg"
+        },
+                {
+            title: "Bachelor of Arts",
+            institution: "South Eastern University",
+            year: "Oct 2022 - Drop Out",
+            image: "/career"
         }
     ];
 
