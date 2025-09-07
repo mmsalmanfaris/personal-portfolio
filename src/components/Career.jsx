@@ -35,7 +35,7 @@ export default function Career() {
             title: "BEng in Software Engineering",
             institution: "London Metropolitan University",
             year: "2023 Jan - 2025 Aug",
-            image: "/career/lmu.png"
+            image: "/career/lmu.svg"
         }
     ];
 
@@ -43,8 +43,8 @@ export default function Career() {
         {
             title: "Digital Marketing Executive",
             company: "Alpha Health Group",
-            period: "Jan 2023 – Present",
-            image: "/images/tech-solutions.png"
+            period: "May 2021 – 2022 Jun",
+            image: "/career/alpha.svg"
         }
     ];
 
