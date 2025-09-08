@@ -2,6 +2,22 @@
 export default function Projects() {
     const projects = [
         {
+            name: "DevSecOps CI/CD Pipeline",
+            description:
+                "Designed and implemented a complete CI/CD pipeline with security practices for a NodeJs application.",
+            tech: ["GitHub Actions", "Docker", "AWS", "ArgoCD", "K8s", "ghcr.io", "Trivy"],
+            github: "https://github.com/mmsalmanfaris/DevSecOps-GitHubAction-Pipeline",
+            image: "/projects/devsecops.svg",
+        },
+        {
+            name: "DevOps E-Commerce Deployment",
+            description:
+                "Deployed a telemetry project with 12 microservices, Kubernetes, Ingress, and AWS Route 53 custom domain setup.",
+            tech: ["K8s", "ArgoCD", "Terraform", "Docker", "AWS", "GitHub Action", "Route53"],
+            github: "https://github.com/mmsalmanfaris/devops-ecommerce-deployment",
+            image: "/projects/devops.jpeg",
+        },
+        {
             name: "Automated Parking System",
             description:
                 "Built a cloud-connected IoT parking system using FastAPI, ESP32, and Kubernetes with automated scaling and monitoring.",
@@ -10,28 +26,12 @@ export default function Projects() {
             image: "/projects/parking.webp",
         },
         {
-            name: "CI/CD Pipeline Setup",
-            description:
-                "Designed and implemented a complete CI/CD pipeline using GitHub Actions and Terraform for a multi-service application.",
-            tech: ["GitHub Actions", "Terraform", "Docker", "AWS"],
-            github: "https://github.com/mmsalmanfaris/CI-CD-Pipeline",
-            image: "/projects/cicd.webp",
-        },
-        {
             name: "Cloud Resource Monitor",
             description:
-                "Developed a full-stack system monitoring tool with FastAPI backend and React frontend for real-time system metrics visualization.",
+                "Developed a full-stack system monitoring tool with FastAPI backend and React frontend for real-time system metrics.",
             tech: ["FastAPI", "React", "Tailwind CSS", "Prometheus"],
             github: "https://github.com/mmsalmanfaris/System-Monitor",
             image: "/projects/monitor.webp",
-        },
-        {
-            name: "Microservices Telemetry",
-            description:
-                "Deployed a telemetry project with 12 microservices, Kubernetes, Ingress, and AWS Route 53 custom domain setup.",
-            tech: ["Kubernetes", "AWS", "Ingress", "Docker"],
-            github: "https://github.com/mmsalmanfaris/Telemetry-Microservices",
-            image: "/projects/microservices.webp",
         },
         {
             name: "Phone Cloud",
@@ -76,10 +76,10 @@ export default function Projects() {
 
                             {/* Project Info */}
                             <div>
-                                <h3 className="text-xl font-semibold text-white mb-2">
+                                <h3 className="text-xl font-semibold text-white mb-2 text-left">
                                     {project.name}
                                 </h3>
-                                <p className="text-gray-300 mb-4">{project.description}</p>
+                                <p className="text-gray-300 mb-4 text-left">{project.description}</p>
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     {project.tech.map((tech, i) => (
                                         <span
