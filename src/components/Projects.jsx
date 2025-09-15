@@ -4,7 +4,7 @@ export default function Projects() {
         {
             name: "DevSecOps CI/CD Pipeline",
             description:
-                "Designed and implemented a complete CI/CD pipeline with security practices for a NodeJs application.",
+                "An automated pipeline that reduced deployment errors, accelerated release cycles, and enforced security checks.",
             tech: ["GitHub Actions", "Docker", "AWS", "ArgoCD", "K8s", "ghcr.io", "Trivy"],
             github: "https://github.com/mmsalmanfaris/DevSecOps-GitHubAction-Pipeline",
             image: "/projects/devsecops.svg",
@@ -20,34 +20,34 @@ export default function Projects() {
         {
             name: "Automated Parking System",
             description:
-                "Built a cloud-connected IoT parking system using FastAPI, ESP32, and Kubernetes with automated scaling and monitoring.",
-            tech: ["FastAPI", "ESP32", "Kubernetes", "Docker"],
-            github: "https://github.com/mmsalmanfaris/Automated-Parking-System",
-            image: "/projects/parking.webp",
+                "An intelligent parking solution enabling real-time detection and automated control, reducing congestion, improving efficiency.",
+            tech: ["FastAPI", "ESP32", "ReactJS", "Firebase", "C++", "Sensor", "Servo", "OpenCV"],
+            github: "https://github.com/mmsalmanfaris/Smart-Parking-System",
+            image: "/projects/parking.png",
         },
         {
-            name: "Cloud Resource Monitor",
+            name: "Linux Resource Monitor",
             description:
-                "Developed a full-stack system monitoring tool with FastAPI backend and React frontend for real-time system metrics.",
-            tech: ["FastAPI", "React", "Tailwind CSS", "Prometheus"],
-            github: "https://github.com/mmsalmanfaris/System-Monitor",
-            image: "/projects/monitor.webp",
+                "A full-stack system monitoring tool with a streamlined one-command setup, enabling real-time visualization of system metrics.",
+            tech: ["FastAPI", "React", "Tailwind CSS", "Psutil", "Scripting"],
+            github: "https://github.com/mmsalmanfaris/Linux-Resource-Monitor",
+            image: "/projects/monitor.png",
         },
         {
             name: "Phone Cloud",
             description:
                 "Turned an Android phone into a file-sharing cloud server with Ubuntu, Tailscale, and GitHub automation.",
-            tech: ["Ubuntu", "Tailscale", "GitHub", "SSH"],
+            tech: ["Proot", "Tailscale", "Termux", "SSH", "bash"],
             github: "https://github.com/mmsalmanfaris/Phone-Cloud",
-            image: "/projects/phonecloud.webp",
+            image: "/projects/phone.png",
         },
         {
-            name: "Portfolio Website",
+            name: "Gas Distribution System",
             description:
-                "Built a modern, responsive portfolio using React, Tailwind CSS, and shadcn UI to showcase DevOps projects.",
-            tech: ["React", "Tailwind CSS", "shadcn/ui"],
-            github: "https://github.com/mmsalmanfaris/portfolio",
-            image: "/projects/portfolio.webp",
+                "Designed and implemented a workflow management system to deliver a seamless experience across the users",
+            tech: ["Bootstrap", "PHP", "Firebase", "MySQL", "SMS", "QR Code", "React Native"],
+            github: "https://github.com/mmsalmanfaris/Gas-Distribution-Management",
+            image: "/projects/gas.png",
         },
     ];
 
@@ -56,9 +56,9 @@ export default function Projects() {
             id="projects"
             className="bg-gray-900 text-white py-16 px-6 sm:px-12 lg:px-24"
         >
-            <div className="max-w-6xl mx-auto text-center">
+            <div className="max-w-6xl mx-auto">
                 <h2 className="text-3xl sm:text-4xl font-bold text-cyan-400 mb-8">
-                    Projects
+                    Projects I worked
                 </h2>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
