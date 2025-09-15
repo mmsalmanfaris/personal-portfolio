@@ -50,7 +50,7 @@ export default function Hero() {
                                 <FaLinkedin />
                             </a>
                             <a
-                                href="https://twitter.com/yourusername"
+                                href="https://www.facebook.com/mmsalmanfaris"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className=" border-cyan-400 hover:bg-cyan-400 hover:text-black transition duration-200 border px-2 py-3 rounded-lg"

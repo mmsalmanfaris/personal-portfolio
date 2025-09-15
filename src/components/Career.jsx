@@ -47,6 +47,12 @@ export default function Career() {
 
     const experienceData = [
         {
+            title: "Freelance Developer",
+            company: "Digital Partner UAE",
+            period: "Aug 2022 – 2025 Aug",
+            image: "/career/dp.svg"
+        },
+        {
             title: "Digital Marketing Executive",
             company: "Alpha Health Group",
             period: "May 2021 – 2022 Jun",
@@ -111,7 +117,7 @@ export default function Career() {
                                     <h3 className="text-lg sm:text-xl font-semibold text-white">
                                         {item.title}
                                     </h3>
-                                    <p className="text-sm text-cyan-400">
+                                    <p className="text-md text-cyan-400">
                                         {item.institution || item.company}
                                     </p>
                                     <p className="text-xs text-gray-400">
