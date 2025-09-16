@@ -57,7 +57,7 @@ export default function Projects() {
             className="bg-gray-900 text-white py-16 px-6 sm:px-12 lg:px-24"
         >
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-3xl sm:text-4xl font-bold text-cyan-400 mb-8">
+                <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-center md:text-left">
                     Projects I worked
                 </h2>
 

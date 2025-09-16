@@ -77,7 +77,7 @@ export default function Career() {
             <div className="max-w-2xl mx-auto">
                 {/* Heading with Tabs */}
                 <div className="mb-10 text-center">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-cyan-400 mb-6">
+                    <h2 className="text-3xl sm:text-4xl font-bold mb-6">
                         Career Journey
                     </h2>
                     <div className="flex justify-center gap-8 border-b border-gray-700 pb-2">

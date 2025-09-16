@@ -14,11 +14,11 @@ export default function Navbar() {
     ];
 
     return (
-        <nav className="fixed top-0 left-0 w-full bg-gray-900 text-white shadow-md z-50">
+        <nav className="fixed top-0 left-0 w-full bg-gray-900 text-white shadow-md z-50 px-5">
             <div className="max-w-6xl mx-auto ">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo / Name */}
-                    <a href="#home" className="text-xl font-bold text-white">
+                    <a href="../" className="text-xl font-bold text-white">
                         MM Salman Faris
                     </a>
 

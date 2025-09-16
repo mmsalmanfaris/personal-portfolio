@@ -5,7 +5,7 @@ export default function Hero() {
     return (
         <section
             id="home"
-            className="bg-gray-900 text-white min-h-screen flex items-center"
+            className="bg-gray-900 text-white flex items-center py-30"
         >
             <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10 px-6 sm:px-12 lg:px-16">
                 {/* Left: Text */}
@@ -34,20 +34,20 @@ export default function Hero() {
                         {/* Social Icons */}
                         <div className="flex gap-4 text-cyan-400 text-2xl">
                             <a
-                                href="https://github.com/mmsalmanfaris"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="border border-cyan-400 hover:bg-cyan-400 hover:text-black transition duration-200 border px-2 py-3 rounded-lg"
-                            >
-                                <FaGithub />
-                            </a>
-                            <a
                                 href="https://www.linkedin.com/in/mmsalmanfaris/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="border border-cyan-400 hover:bg-cyan-400 hover:text-black transition duration-200 border px-2 py-3 rounded-lg"
                             >
                                 <FaLinkedin />
+                            </a>
+                            <a
+                                href="https://github.com/mmsalmanfaris"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="border border-cyan-400 hover:bg-cyan-400 hover:text-black transition duration-200 border px-2 py-3 rounded-lg"
+                            >
+                                <FaGithub />
                             </a>
                             <a
                                 href="https://www.facebook.com/mmsalmanfaris"
@@ -62,11 +62,11 @@ export default function Hero() {
                 </div>
 
                 {/* Right: Image */}
-                <div className="flex-1 flex justify-center md:justify-end">
+                <div className="flex-1 flex justify-center md:justify-end ">
                     <img
                         src="/profile.webp"
                         alt="MM Salman Faris"
-                        className="w-48 sm:w-64 md:w-full max-w-md rounded-lg shadow-lg"
+                        className="w-70 sm:w-64 md:w-full max-w-md rounded-lg shadow-lg"
                     />
                 </div>
             </div>

@@ -8,7 +8,7 @@ export default function Contact() {
             className="bg-gray-900 text-white py-16 px-6 sm:px-12 lg:px-24"
         >
             <div className="max-w-6xl mx-auto text-center">
-                <h2 className="text-3xl sm:text-4xl font-bold text-cyan-400 mb-4">
+                <h2 className="text-3xl sm:text-4xl font-bold mb-4">
                     Contact Me
                 </h2>
                 <p className="text-gray-300 mb-12">
@@ -20,7 +20,7 @@ export default function Contact() {
                 <div className="grid lg:grid-cols-2 gap-12 items-start">
                     {/* Contact Form */}
                     <form
-                        action="https://formspree.io/f/yourFormID"
+                        action=""
                         method="POST"
                         className="bg-gray-800 p-6 rounded-lg shadow-lg w-full"
                     >
@@ -32,6 +32,7 @@ export default function Contact() {
                                 type="text"
                                 id="name"
                                 name="name"
+                                placeholder="Full Name"
                                 required
                                 className="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
                             />
@@ -45,6 +46,22 @@ export default function Contact() {
                                 type="email"
                                 id="email"
                                 name="email"
+                                placeholder="example@gmail.com"
+                                required
+                                className="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                            />
+                        </div>
+
+                        {/* Phone Number */}
+                        <div className="mb-4 text-left">
+                            <label htmlFor="phone" className="block text-sm text-gray-400 mb-2">
+                                Phone Number
+                            </label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="+94 76 123 4567"
                                 required
                                 className="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
                             />
@@ -71,8 +88,8 @@ export default function Contact() {
                         </button>
                     </form>
 
-                    {/* Calendly Widget */}
-                    <div className="w-full">
+                    {/* Calendly Widget (hidden on mobile) */}
+                    <div className="w-full hidden lg:block">
                         <div
                             className="calendly-inline-widget rounded-lg shadow-lg"
                             data-url="https://calendly.com/mmsalmanfaaris01/30min?hide_event_type_details=1&hide_gdpr_banner=1"
@@ -85,7 +102,6 @@ export default function Contact() {
                         ></script>
                     </div>
                 </div>
-
             </div>
         </section>
     );
