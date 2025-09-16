@@ -15,7 +15,7 @@ export default function Skills() {
         { name: "Terraform", icon: <SiTerraform className="w-10 h-10" /> },
         { name: "Jenkins", icon: <LiaJenkins className="w-10 h-10" /> },
         { name: "Ansible", icon: <SiAnsible className="w-10 h-10" /> },
-        { name: "Prometheus Stack", icon: <SiPrometheus className="w-10 h-10" /> },
+        { name: "Prometheus", icon: <SiPrometheus className="w-10 h-10" /> },
     ];
 
 
