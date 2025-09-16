@@ -1,8 +1,6 @@
 // CICDWorkflow.jsx
 import { FaCode, FaDocker, FaVial } from "react-icons/fa";
 import { SiKubernetes, SiPrometheus } from "react-icons/si";
-import { LiaJenkins } from "react-icons/lia";
-
 
 export default function CICDWorkflow() {
     const stages = [
@@ -14,11 +12,14 @@ export default function CICDWorkflow() {
     ];
 
     return (
-        <div className="flex justify-center items-center gap-8 flex-wrap relative">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-8 relative">
             {stages.map((stage, index) => (
-                <div key={index} className="flex flex-col items-center relative bg-gray-900">
+                <div
+                    key={index}
+                    className="flex flex-col items-center relative bg-gray-900"
+                >
                     <div className="relative w-20 h-20">
-                        <svg className="w-20 h-20 rotate-[0deg]">
+                        <svg className="w-20 h-20">
                             {/* Background Circle */}
                             <circle
                                 cx="40"
@@ -51,35 +52,58 @@ export default function CICDWorkflow() {
 
                     {/* Connector Line */}
                     {index < stages.length - 1 && (
-                        <div
-                            className="absolute top-1/2 left-full w-16 h-1 origin-left"
-                            style={{
-                                backgroundColor: "transparent",
-                                animation: `fillLine 1s forwards ${(index + 1) * 0.4}s`,
-                            }}
-                        />
+                        <>
+                            <div
+                                className="hidden md:block absolute top-1/2 left-full w-16 h-1 origin-left"
+                                style={{
+                                    backgroundColor: "transparent",
+                                    animation: `fillLine 1s forwards ${(index + 1) * 0.4}s`,
+                                }}
+                            />
+                            <div
+                                className="block md:hidden absolute top-20 left-1/2 w-1 h-16 origin-top"
+                                style={{
+                                    backgroundColor: "transparent",
+                                    animation: `fillLine 1s forwards ${(index + 1) * 0.4}s`,
+                                }}
+                            />
+                        </>
                     )}
                 </div>
             ))}
 
             <style jsx>{`
-        @keyframes fillCircle {
-          to {
-            stroke-dashoffset: 0;
-          }
-        }
+                @keyframes fillCircle {
+                    to {
+                        stroke-dashoffset: 0;
+                    }
+                }
 
-        @keyframes fillLine {
-          from {
-            background-color: transparent;
-            transform: scaleX(0);
-          }
-          to {
-            background-color: white;
-            transform: scaleX(1);
-          }
-        }
-      `}</style>
+                @keyframes fillLine {
+                    from {
+                        background-color: transparent;
+                        transform: scaleX(0);
+                    }
+                    to {
+                        background-color: white;
+                        transform: scaleX(1);
+                    }
+                }
+
+                /* Mobile vertical line animation */
+                @media (max-width: 767px) {
+                    @keyframes fillLine {
+                        from {
+                            background-color: transparent;
+                            transform: scaleY(0);
+                        }
+                        to {
+                            background-color: white;
+                            transform: scaleY(1);
+                        }
+                    }
+                }
+            `}</style>
         </div>
     );
 }
