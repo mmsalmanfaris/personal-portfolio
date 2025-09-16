@@ -48,16 +48,20 @@ export default function Events() {
     return (
         <section id="events" className="bg-gray-900 text-white py-16 px-6 sm:px-12 lg:px-24">
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-12">
+                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-12 text-center md:text-left">
                     Events I Conducted
                 </h2>
 
                 <Swiper
                     modules={[Navigation, Autoplay]}
-                    spaceBetween={30}
-                    slidesPerView={3}
-                    autoplay={{ delay: 1500 }}
+                    spaceBetween={20}
+                    autoplay={{ delay: 2000 }}
                     loop
+                    breakpoints={{
+                        0: { slidesPerView: 1 },
+                        640: { slidesPerView: 2 },
+                        1024: { slidesPerView: 3 }
+                    }}
                 >
                     {eventsData.map((event, index) => (
                         <SwiperSlide key={index}>
@@ -66,7 +70,7 @@ export default function Events() {
                                 <img
                                     src={event.image}
                                     alt={event.title}
-                                    className="w-full h-50 object-cover"
+                                    className="w-full h-48 object-cover"
                                 />
 
                                 {/* Event Content */}
@@ -78,7 +82,6 @@ export default function Events() {
                                     <h3 className="text-lg font-semibold text-white py-2">
                                         {event.title}
                                     </h3>
-
                                 </div>
                             </div>
                         </SwiperSlide>
@@ -86,5 +89,6 @@ export default function Events() {
                 </Swiper>
             </div>
         </section>
+
     );
 }

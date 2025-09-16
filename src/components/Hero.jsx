@@ -7,20 +7,20 @@ export default function Hero() {
             id="home"
             className="bg-gray-900 text-white min-h-screen flex items-center"
         >
-            <div className="max-w-6xl mx-auto  flex flex-col md:flex-row items-center gap-10">
+            <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10 px-6 sm:px-12 lg:px-16">
                 {/* Left: Text */}
-                <div className="flex-1">
-                    <h1 className="text-4xl sm:text-5xl font-bold text-cyan-400 mb-8">
+                <div className="flex-1 text-center md:text-left">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-cyan-400 mb-6">
                         Hi, I’m Salman Faris
                     </h1>
-                    <p className="text-gray-300 text-lg sm:text-xl mb-8">
-                        I’m a <span className="text-white font-semibold">DevOps Engineer & SRE</span>
+                    <p className="text-gray-300 text-base sm:text-lg md:text-xl mb-8">
+                        I’m a DevOps Engineer & SRE
                         who builds scalable, automated, and resilient cloud systems.
-                        Passionate about CI/CD, Kubernetes, Terraform, and cloud automation.
+                        Passionate about delivering reliable operations and cloud solutions.
                     </p>
 
                     {/* Call to Action Buttons */}
-                    <div className="flex flex-wrap gap-4">
+                    <div className="flex flex-wrap justify-center md:justify-start gap-4">
                         {/* Resume Button */}
                         <a
                             href="/resume.pdf"
@@ -37,7 +37,7 @@ export default function Hero() {
                                 href="https://github.com/mmsalmanfaris"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className=" border-cyan-400 hover:bg-cyan-400 hover:text-black transition duration-200 border px-2 py-3 rounded-lg"
+                                className="border border-cyan-400 hover:bg-cyan-400 hover:text-black transition duration-200 border px-2 py-3 rounded-lg"
                             >
                                 <FaGithub />
                             </a>
@@ -45,7 +45,7 @@ export default function Hero() {
                                 href="https://www.linkedin.com/in/mmsalmanfaris/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className=" border-cyan-400 hover:bg-cyan-400 hover:text-black transition duration-200 border px-2 py-3 rounded-lg"
+                                className="border border-cyan-400 hover:bg-cyan-400 hover:text-black transition duration-200 border px-2 py-3 rounded-lg"
                             >
                                 <FaLinkedin />
                             </a>
@@ -53,21 +53,20 @@ export default function Hero() {
                                 href="https://www.facebook.com/mmsalmanfaris"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className=" border-cyan-400 hover:bg-cyan-400 hover:text-black transition duration-200 border px-2 py-3 rounded-lg"
+                                className="border border-cyan-400 hover:bg-cyan-400 hover:text-black transition duration-200 border px-2 py-3 rounded-lg"
                             >
                                 <FaFacebook />
                             </a>
                         </div>
                     </div>
-
                 </div>
 
-                {/* Right: Illustration / Image */}
-                <div className="flex-1 flex justify-end">
+                {/* Right: Image */}
+                <div className="flex-1 flex justify-center md:justify-end">
                     <img
                         src="/profile.webp"
-                        alt="MM Salman Faris Image"
-                        className="w-full max-w-md rounded-lg shadow-lg"
+                        alt="MM Salman Faris"
+                        className="w-48 sm:w-64 md:w-full max-w-md rounded-lg shadow-lg"
                     />
                 </div>
             </div>
