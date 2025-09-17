@@ -93,7 +93,7 @@ export default function Contact() {
                         <div
                             className="calendly-inline-widget rounded-lg shadow-lg"
                             data-url="https://calendly.com/mmsalmanfaaris01/30min?hide_event_type_details=1&hide_gdpr_banner=1"
-                            style={{ minWidth: "320px", height: "550px" }}
+                            style={{ minWidth: "320px", height: "500px" }}
                         ></div>
                         <script
                             type="text/javascript"

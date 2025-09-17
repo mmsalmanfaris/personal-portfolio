@@ -1,10 +1,10 @@
 // Footer.jsx
 export default function Footer() {
     return (
-        <footer className="bg-gray-900 text-gray-400 py-8 px-6 sm:px-12 lg:px-24">
+        <footer className="bg-gray-800 text-gray-400 py-3 px-6 sm:px-12 lg:px-24">
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
                 {/* Left side */}
-                <p className="text-sm mb-4 md:mb-0">
+                <p className="text-sm md:mb-0">
                     &copy; {new Date().getFullYear()} mmsalmanfaris. All rights reserved.
                 </p>
 

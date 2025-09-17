@@ -14,21 +14,28 @@ export default function Navbar() {
     ];
 
     return (
-        <nav className="fixed top-0 left-0 w-full bg-gray-900 text-white shadow-md z-50 px-5">
-            <div className="max-w-6xl mx-auto ">
-                <div className="flex justify-between items-center h-16">
-                    {/* Logo / Name */}
-                    <a href="../" className="text-xl font-bold text-white">
-                        MM Salman Faris
+        <nav
+            className="fixed top-0 left-0 w-full bg-gray-900 text-white shadow-md z-50"
+            role="navigation"
+            aria-label="Main Navigation"
+        >
+            <div className="max-w-6xl mx-auto px-4 md:px-0">
+                <div className="flex justify-between items-center h-16 md:h-20">
+                    <a href="/" className="flex items-center">
+                        <img
+                            src="/logo.png"
+                            alt="Site logo"
+                            className="h-8 md:h-10 object-contain"
+                        />
                     </a>
 
                     {/* Desktop Menu */}
-                    <div className="hidden md:flex space-x-6">
+                    <div className="hidden md:flex items-center space-x-8">
                         {navLinks.map((link) => (
                             <a
                                 key={link.name}
                                 href={link.href}
-                                className="font-medium hover:text-cyan-400 transition-colors duration-200"
+                                className="font-medium text-sm md:text-base hover:text-cyan-400 transition-colors duration-200"
                             >
                                 {link.name}
                             </a>
@@ -39,14 +46,17 @@ export default function Navbar() {
                     <div className="md:hidden">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="focus:outline-none"
+                            className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                            aria-controls="mobile-menu"
+                            aria-expanded={isOpen}
+                            aria-label={isOpen ? "Close menu" : "Open menu"}
                         >
-                            {/* Hamburger icon */}
                             <svg
                                 className="w-6 h-6"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
+                                aria-hidden="true"
                             >
                                 {isOpen ? (
                                     <path
@@ -69,23 +79,25 @@ export default function Navbar() {
                 </div>
             </div>
 
-            {/* Mobile Menu */}
-            {isOpen && (
-                <div className="md:hidden bg-gray-800">
-                    <div className="flex flex-col space-y-2 px-4 py-3">
-                        {navLinks.map((link) => (
-                            <a
-                                key={link.name}
-                                href={link.href}
-                                onClick={() => setIsOpen(false)}
-                                className="hover:text-cyan-400 transition-colors duration-200"
-                            >
-                                {link.name}
-                            </a>
-                        ))}
-                    </div>
+            {/* Mobile Menu - animated height for smooth open/close */}
+            <div
+                id="mobile-menu"
+                className={`md:hidden bg-gray-800 overflow-hidden transition-all duration-300 ${isOpen ? "max-h-72 py-3" : "max-h-0 py-0"
+                    }`}
+            >
+                <div className="flex flex-col space-y-1 px-4">
+                    {navLinks.map((link) => (
+                        <a
+                            key={link.name}
+                            href={link.href}
+                            onClick={() => setIsOpen(false)}
+                            className="block py-2 px-2 rounded hover:bg-gray-700 hover:text-cyan-400 transition-colors duration-150"
+                        >
+                            {link.name}
+                        </a>
+                    ))}
                 </div>
-            )}
+            </div>
         </nav>
     );
 }

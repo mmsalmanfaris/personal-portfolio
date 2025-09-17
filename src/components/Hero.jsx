@@ -14,9 +14,7 @@ export default function Hero() {
                         Hi, I’m Salman Faris
                     </h1>
                     <p className="text-gray-300 text-base sm:text-lg md:text-xl mb-8">
-                        I’m a DevOps Engineer & SRE
-                        who builds scalable, automated, and resilient cloud systems.
-                        Passionate about delivering reliable operations and cloud solutions.
+                        Software Engineer(Ops) with expertise in automation, monitoring, and system reliability. Passionate about designing resilient cloud platforms and streamlining operations through DevOps practices.
                     </p>
 
                     {/* Call to Action Buttons */}
@@ -28,7 +26,7 @@ export default function Hero() {
                             rel="noopener noreferrer"
                             className="border border-cyan-400 hover:bg-cyan-400 hover:text-black text-cyan-400 font-semibold py-3 px-6 rounded-lg transition duration-200"
                         >
-                            Download Resume
+                            Resume
                         </a>
 
                         {/* Social Icons */}
