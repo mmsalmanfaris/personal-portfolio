@@ -1,6 +1,6 @@
 // Events.jsx
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -8,28 +8,16 @@ import "swiper/css/pagination";
 export default function Events() {
     const eventsData = [
         {
-            title: "MLSA Introduction and Journey",
-            role: "Tech Talk",
-            date: "November 2023",
-            image: "/event/first_event.jpeg"
-        },
-        {
-            title: "Global Azure Sri Lanka",
+            title: "Cloud Computing & Developer Tools",
             role: "Workshop",
-            date: "May 2024",
-            image: "/event/second_event.jpeg"
+            date: "Sep 2025",
+            image: "/event/seventh_event.jpg"
         },
         {
-            title: "Git, GitHub and Azure Static App",
-            role: "Hands-on Lab",
-            date: "August 2024",
-            image: "/event/third_event.jpg"
-        },
-        {
-            title: "How to become a MLSA",
-            role: "Hands-on Lab",
-            date: "December 2024",
-            image: "/event/fourth_event.jpg"
+            title: "Azure & GitHub (DevOps)",
+            role: "Workshop",
+            date: "June 2025",
+            image: "/event/sixth_event.jpeg"
         },
         {
             title: "Azure Services and Business Models",
@@ -38,10 +26,28 @@ export default function Events() {
             image: "/event/fifth_event.jpg"
         },
         {
-            title: "Azure & GitHub (DevOps)",
+            title: "How to become a MLSA",
+            role: "Hands-on Lab",
+            date: "December 2024",
+            image: "/event/fourth_event.jpg"
+        },
+        {
+            title: "Git, GitHub and Azure Static App",
+            role: "Hands-on Lab",
+            date: "August 2024",
+            image: "/event/third_event.jpg"
+        },
+        {
+            title: "Global Azure Sri Lanka",
             role: "Workshop",
-            date: "June 2025",
-            image: "/event/sixth_event.jpeg"
+            date: "May 2024",
+            image: "/event/second_event.jpeg"
+        },
+        {
+            title: "MLSA Introduction and Journey",
+            role: "Tech Talk",
+            date: "November 2023",
+            image: "/event/first_event.jpeg"
         },
     ];
 
