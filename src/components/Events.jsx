@@ -11,43 +11,43 @@ export default function Events() {
             title: "Cloud Computing & Developer Tools",
             role: "Workshop",
             date: "Sep 2025",
-            image: "/event/seventh_event.jpg"
+            image: "/event/seventh_event.webp"
         },
         {
             title: "Azure & GitHub (DevOps)",
             role: "Workshop",
             date: "June 2025",
-            image: "/event/sixth_event.jpeg"
+            image: "/event/sixth_event.webp"
         },
         {
             title: "Azure Services and Business Models",
             role: "Workshop",
             date: "March 2025",
-            image: "/event/fifth_event.jpg"
+            image: "/event/fifth_event.webp"
         },
         {
             title: "How to become a MLSA",
             role: "Hands-on Lab",
             date: "December 2024",
-            image: "/event/fourth_event.jpg"
+            image: "/event/fourth_event.webp"
         },
         {
             title: "Git, GitHub and Azure Static App",
             role: "Hands-on Lab",
             date: "August 2024",
-            image: "/event/third_event.jpg"
+            image: "/event/third_event.webp"
         },
         {
             title: "Global Azure Sri Lanka",
             role: "Workshop",
             date: "May 2024",
-            image: "/event/second_event.jpeg"
+            image: "/event/second_event.webp"
         },
         {
             title: "MLSA Introduction and Journey",
             role: "Tech Talk",
             date: "November 2023",
-            image: "/event/first_event.jpeg"
+            image: "/event/first_event.webp"
         },
     ];
 
