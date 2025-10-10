@@ -11,7 +11,7 @@ export default function Career() {
             image: "/career/linux-foundation.svg"
         },
         {
-            title: "Microsoft Certified: Azure Fundamentals",
+            title: "Microsoft Azure Fundamentals",
             institution: "Microsoft",
             year: "2025",
             image: "/career/azure-fundamental.svg"
