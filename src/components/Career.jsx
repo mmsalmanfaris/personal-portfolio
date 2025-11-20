@@ -5,6 +5,12 @@ export default function Career() {
 
     const certificationData = [
         {
+            title: "FinOps Certified Practitioner",
+            institution: "FinOps Foundation",
+            year: "2025 - 2027",
+            image: "/career/finops-practitioner.svg"
+        },
+        {
             title: "Introduction to Linux",
             institution: "The Linux Foundation",
             year: "2025",
@@ -47,6 +53,12 @@ export default function Career() {
 
     const experienceData = [
         {
+            title: "Intern DevOps Engineer",
+            company: "QuickMan",
+            period: "Oct 2025 – Present",
+            image: "/career/quickman.svg"
+        },
+        {
             title: "Freelance Developer",
             company: "Digital Partner UAE",
             period: "Aug 2022 – 2025 Aug",
@@ -62,8 +74,8 @@ export default function Career() {
 
     const tabs = {
         certifications: certificationData,
-        education: educationData,
         experience: experienceData,
+        education: educationData,
     };
 
     const data = tabs[activeTab];
@@ -77,13 +89,8 @@ export default function Career() {
                             Career Journey
                         </span>
                     </h2>
-                    <p className="text-slate-400 max-w-2xl mx-auto mb-8">
-                        Explore my professional journey through certifications, education, and experience.
-                    </p>
-
-                    {/* Tabs */}
-                    <div className="flex justify-center gap-4 flex-wrap">
-                        {["certifications", "education", "experience"].map((tab) => (
+                    <div className="flex justify-center gap-8 border-b border-gray-700 pb-2">
+                        {["certifications", "experience", "education"].map((tab) => (
                             <button
                                 key={tab}
                                 onClick={() => setActiveTab(tab)}
