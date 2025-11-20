@@ -5,6 +5,12 @@ export default function Career() {
 
     const certificationData = [
         {
+            title: "FinOps Certified Practitioner",
+            institution: "FinOps Foundation",
+            year: "2025",
+            image: "/career/finops-practitioner.svg"
+        },
+        {
             title: "Introduction to Linux",
             institution: "The Linux Foundation",
             year: "2025",
