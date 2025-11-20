@@ -1,37 +1,47 @@
 // Footer.jsx
+import { FaGithub, FaLinkedin, FaEnvelope, FaHeart } from "react-icons/fa";
+
 export default function Footer() {
     return (
-        <footer className="bg-gray-800 text-gray-400 py-3 px-6 sm:px-12 lg:px-24">
-            <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
-                {/* Left side */}
-                <p className="text-sm md:mb-0">
-                    &copy; {new Date().getFullYear()} mmsalmanfaris. All rights reserved.
-                </p>
+        <footer className="relative border-t border-white/5 bg-slate-950/80 backdrop-blur-md">
+            <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 py-8">
+                <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+                    {/* Left side */}
+                    <div className="flex items-center gap-2 text-slate-400 text-sm">
+                        <span>&copy; {new Date().getFullYear()} mmsalmanfaris.</span>
+                        <span className="hidden sm:inline">Built with</span>
+                        <FaHeart className="text-cyan-400 animate-pulse" size={14} />
+                        <span className="hidden sm:inline">and React</span>
+                    </div>
 
-                {/* Right side - social links */}
-                <div className="flex space-x-6">
-                    <a
-                        href="https://github.com/yourusername"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:text-cyan-400 transition-colors duration-200"
-                    >
-                        <i className="fab fa-github text-2xl"></i>
-                    </a>
-                    <a
-                        href="https://linkedin.com/in/yourusername"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:text-cyan-400 transition-colors duration-200"
-                    >
-                        <i className="fab fa-linkedin text-2xl"></i>
-                    </a>
-                    <a
-                        href="mailto:your@email.com"
-                        className="hover:text-cyan-400 transition-colors duration-200"
-                    >
-                        <i className="fas fa-envelope text-2xl"></i>
-                    </a>
+                    {/* Right side - social links */}
+                    <div className="flex gap-4">
+                        <a
+                            href="https://github.com/mmsalmanfaris"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-2 rounded-full text-slate-400 hover:text-cyan-400 hover:bg-cyan-400/10 border border-transparent hover:border-cyan-400/30 transition-all duration-300"
+                            aria-label="GitHub"
+                        >
+                            <FaGithub size={20} />
+                        </a>
+                        <a
+                            href="https://linkedin.com/in/mmsalmanfaris"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-2 rounded-full text-slate-400 hover:text-cyan-400 hover:bg-cyan-400/10 border border-transparent hover:border-cyan-400/30 transition-all duration-300"
+                            aria-label="LinkedIn"
+                        >
+                            <FaLinkedin size={20} />
+                        </a>
+                        <a
+                            href="mailto:mmsalmanfaaris01@gmail.com"
+                            className="p-2 rounded-full text-slate-400 hover:text-cyan-400 hover:bg-cyan-400/10 border border-transparent hover:border-cyan-400/30 transition-all duration-300"
+                            aria-label="Email"
+                        >
+                            <FaEnvelope size={20} />
+                        </a>
+                    </div>
                 </div>
             </div>
         </footer>

@@ -3,97 +3,95 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Contact() {
     return (
-        <section
-            id="contact"
-            className="bg-gray-900 text-white py-16 px-6 sm:px-12 lg:px-24"
-        >
-            <div className="max-w-6xl mx-auto text-center">
-                <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                    Contact Me
-                </h2>
-                <p className="text-gray-300 mb-12">
-                    Have a project in mind, want to collaborate, or just say hello?
-                    Fill out the form below or book a call through Calendly.
-                </p>
+        <section id="contact" className="py-24 relative">
+            <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16">
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                        <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                            Get In Touch
+                        </span>
+                    </h2>
+                    <p className="text-slate-400 max-w-2xl mx-auto">
+                        Have a project in mind, want to collaborate, or just say hello?
+                        Fill out the form below or book a call through Calendly.
+                    </p>
+                </div>
 
-                {/* Layout: Form + Calendly side by side on large screens */}
                 <div className="grid lg:grid-cols-2 gap-12 items-start">
                     {/* Contact Form */}
-                    <form
-                        action=""
-                        method="POST"
-                        className="bg-gray-800 p-6 rounded-lg shadow-lg w-full"
-                    >
-                        <div className="mb-4 text-left">
-                            <label htmlFor="name" className="block text-sm text-gray-400 mb-2">
-                                Name
-                            </label>
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                placeholder="Full Name"
-                                required
-                                className="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                            />
-                        </div>
+                    <div className="bg-slate-900/50 border border-white/5 p-8 rounded-2xl shadow-xl">
+                        <form action="" method="POST" className="space-y-6">
+                            <div>
+                                <label htmlFor="name" className="block text-sm font-medium text-slate-400 mb-2">
+                                    Name
+                                </label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Your Full Name"
+                                    required
+                                    className="w-full px-4 py-3 rounded-lg bg-slate-800/50 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all"
+                                />
+                            </div>
 
-                        <div className="mb-4 text-left">
-                            <label htmlFor="email" className="block text-sm text-gray-400 mb-2">
-                                Email
-                            </label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                placeholder="example@gmail.com"
-                                required
-                                className="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                            />
-                        </div>
+                            <div>
+                                <label htmlFor="email" className="block text-sm font-medium text-slate-400 mb-2">
+                                    Email
+                                </label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="example@domain.com"
+                                    required
+                                    className="w-full px-4 py-3 rounded-lg bg-slate-800/50 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all"
+                                />
+                            </div>
 
-                        {/* Phone Number */}
-                        <div className="mb-4 text-left">
-                            <label htmlFor="phone" className="block text-sm text-gray-400 mb-2">
-                                Phone Number
-                            </label>
-                            <input
-                                type="tel"
-                                id="phone"
-                                name="phone"
-                                placeholder="+94 76 123 4567"
-                                required
-                                className="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                            />
-                        </div>
+                            <div>
+                                <label htmlFor="phone" className="block text-sm font-medium text-slate-400 mb-2">
+                                    Phone Number
+                                </label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="+1 (555) 000-0000"
+                                    required
+                                    className="w-full px-4 py-3 rounded-lg bg-slate-800/50 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all"
+                                />
+                            </div>
 
-                        <div className="mb-4 text-left">
-                            <label htmlFor="message" className="block text-sm text-gray-400 mb-2">
-                                Message
-                            </label>
-                            <textarea
-                                id="message"
-                                name="message"
-                                rows="4"
-                                required
-                                className="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                            ></textarea>
-                        </div>
+                            <div>
+                                <label htmlFor="message" className="block text-sm font-medium text-slate-400 mb-2">
+                                    Message
+                                </label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="4"
+                                    placeholder="How can I help you?"
+                                    required
+                                    className="w-full px-4 py-3 rounded-lg bg-slate-800/50 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all resize-none"
+                                ></textarea>
+                            </div>
 
-                        <button
-                            type="submit"
-                            className="w-full py-2 px-4 bg-cyan-500 hover:bg-cyan-400 text-black font-semibold rounded-lg transition duration-200"
-                        >
-                            Send Message
-                        </button>
-                    </form>
+                            <button
+                                type="submit"
+                                className="w-full py-3.5 px-6 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold rounded-lg shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all duration-300 transform hover:-translate-y-0.5"
+                            >
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
 
-                    {/* Calendly Widget (hidden on mobile) */}
-                    <div className="w-full hidden lg:block">
+                    {/* Calendly Widget */}
+                    <div className="w-full hidden lg:block bg-slate-900/50 border border-white/5 p-4 rounded-2xl shadow-xl h-full min-h-[600px]">
                         <div
-                            className="calendly-inline-widget rounded-lg shadow-lg"
-                            data-url="https://calendly.com/mmsalmanfaaris01/30min?hide_event_type_details=1&hide_gdpr_banner=1"
-                            style={{ minWidth: "320px", height: "500px" }}
+                            className="calendly-inline-widget w-full h-full rounded-xl overflow-hidden"
+                            data-url="https://calendly.com/mmsalmanfaaris01/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=0f172a&text_color=f8fafc&primary_color=06b6d4"
+                            style={{ minWidth: "320px", height: "100%" }}
                         ></div>
                         <script
                             type="text/javascript"
