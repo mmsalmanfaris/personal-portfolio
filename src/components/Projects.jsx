@@ -1,4 +1,6 @@
 // Projects.jsx
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+
 export default function Projects() {
     const projects = [
         {
@@ -52,71 +54,72 @@ export default function Projects() {
     ];
 
     return (
-        <section
-            id="projects"
-            className="bg-gray-900 text-white py-16 px-6 sm:px-12 lg:px-24"
-        >
-            <div className="max-w-6xl mx-auto">
-                <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-center md:text-left">
-                    Projects I worked
-                </h2>
+        <section id="projects" className="py-24 relative">
+            <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16">
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                        <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                            Featured Projects
+                        </span>
+                    </h2>
+                    <p className="text-slate-400 max-w-2xl mx-auto">
+                        A selection of projects demonstrating my expertise in DevOps, Cloud, and Full Stack Development.
+                    </p>
+                </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project, index) => (
                         <div
                             key={index}
-                            className="bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition duration-200 flex flex-col justify-between"
+                            className="group relative bg-slate-900/50 border border-white/5 rounded-2xl overflow-hidden hover:border-cyan-500/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-cyan-500/10"
                         >
                             {/* Project Image */}
-                            <img
-                                src={project.image}
-                                alt={project.name}
-                                className="w-full h-40 object-cover rounded-md mb-4"
-                            />
+                            <div className="relative h-48 overflow-hidden">
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent z-10 opacity-60"></div>
+                                <img
+                                    src={project.image}
+                                    alt={project.name}
+                                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                />
+                            </div>
 
                             {/* Project Info */}
-                            <div>
-                                <h3 className="text-xl font-semibold text-white mb-2 text-left">
+                            <div className="p-6 relative z-20">
+                                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                                     {project.name}
                                 </h3>
-                                <p className="text-gray-300 mb-4 text-left">{project.description}</p>
-                                <div className="flex flex-wrap gap-2 mb-4">
-                                    {project.tech.map((tech, i) => (
+                                <p className="text-slate-400 text-sm mb-6 line-clamp-3">
+                                    {project.description}
+                                </p>
+
+                                <div className="flex flex-wrap gap-2 mb-6">
+                                    {project.tech.slice(0, 4).map((tech, i) => (
                                         <span
                                             key={i}
-                                            className="bg-gray-700 px-2 py-1 rounded text-sm"
+                                            className="px-2 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700"
                                         >
                                             {tech}
                                         </span>
                                     ))}
+                                    {project.tech.length > 4 && (
+                                        <span className="px-2 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">
+                                            +{project.tech.length - 4}
+                                        </span>
+                                    )}
                                 </div>
-                            </div>
 
-                            {/* GitHub Link */}
-                            <div className="flex mt-auto">
-                                <a
-                                    href={project.github}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-cyan-400 text-sm inline-flex items-center group"
-                                >
-                                    GitHub
-                                    <svg
-                                        className="ml-2 w-4 h-4 transition-transform transform group-hover:translate-x-1"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        aria-hidden="true"
+                                {/* Links */}
+                                <div className="flex items-center justify-between pt-4 border-t border-white/5">
+                                    <a
+                                        href={project.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-cyan-400 transition-colors"
                                     >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth={2}
-                                            d="M17 8l4 4m0 0l-4 4m4-4H3"
-                                        />
-                                    </svg>
-                                </a>
+                                        <FaGithub size={16} />
+                                        <span>View Code</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     ))}

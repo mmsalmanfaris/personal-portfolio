@@ -1,8 +1,11 @@
 // Navbar.jsx
 import { useState } from "react";
+import { FaSun, FaMoon } from "react-icons/fa";
+import { useTheme } from "../context/ThemeContext";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const { theme, toggleTheme } = useTheme();
 
     const navLinks = [
         { name: "Home", href: "#home" },
@@ -15,13 +18,13 @@ export default function Navbar() {
 
     return (
         <nav
-            className="fixed top-0 left-0 w-full bg-gray-900 text-white shadow-md z-50"
+            className="fixed top-0 left-0 w-full z-50 transition-all duration-300 backdrop-blur-md border-b shadow-sm bg-theme-primary/90 border-theme"
             role="navigation"
             aria-label="Main Navigation"
         >
-            <div className="max-w-6xl mx-auto px-4 md:px-0">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16 md:h-20">
-                    <a href="/" className="flex items-center">
+                    <a href="/" className="flex items-center group">
                         <img
                             src="/logo.png"
                             alt="Site logo"
@@ -35,18 +38,45 @@ export default function Navbar() {
                             <a
                                 key={link.name}
                                 href={link.href}
-                                className="font-medium text-sm md:text-base hover:text-cyan-400 transition-colors duration-200"
+                                className="font-medium text-sm md:text-base text-theme-secondary hover:text-cyan-500 transition-colors duration-200 relative group"
                             >
                                 {link.name}
+                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-500 transition-all duration-300 group-hover:w-full"></span>
                             </a>
                         ))}
                     </div>
 
+                    {/* Theme Toggle Button */}
+                    <button
+                        onClick={toggleTheme}
+                        className="p-2 rounded-full text-theme-secondary hover:text-cyan-500 hover:bg-cyan-500/10 transition-all duration-300 hidden md:block"
+                        aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+                    >
+                        {theme === 'dark' ? (
+                            <FaSun className="w-5 h-5" />
+                        ) : (
+                            <FaMoon className="w-5 h-5" />
+                        )}
+                    </button>
+
                     {/* Mobile Menu Button */}
-                    <div className="md:hidden">
+                    <div className="md:hidden flex items-center gap-2">
+                        {/* Theme Toggle for Mobile */}
+                        <button
+                            onClick={toggleTheme}
+                            className="p-2 rounded-full text-theme-secondary hover:text-cyan-500 hover:bg-cyan-500/10 transition-all duration-300"
+                            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+                        >
+                            {theme === 'dark' ? (
+                                <FaSun className="w-5 h-5" />
+                            ) : (
+                                <FaMoon className="w-5 h-5" />
+                            )}
+                        </button>
+
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                            className="p-2 rounded-md text-theme-secondary hover:text-theme-primary focus:outline-none"
                             aria-controls="mobile-menu"
                             aria-expanded={isOpen}
                             aria-label={isOpen ? "Close menu" : "Open menu"}
@@ -79,19 +109,19 @@ export default function Navbar() {
                 </div>
             </div>
 
-            {/* Mobile Menu - animated height for smooth open/close */}
+            {/* Mobile Menu */}
             <div
                 id="mobile-menu"
-                className={`md:hidden bg-gray-800 overflow-hidden transition-all duration-300 ${isOpen ? "max-h-72 py-3" : "max-h-0 py-0"
+                className={`md:hidden bg-theme-primary/95 backdrop-blur-xl overflow-hidden transition-all duration-300 border-t border-theme ${isOpen ? "max-h-96" : "max-h-0"
                     }`}
             >
-                <div className="flex flex-col space-y-1 px-4">
+                <div className="flex flex-col space-y-1 px-4 py-4">
                     {navLinks.map((link) => (
                         <a
                             key={link.name}
                             href={link.href}
                             onClick={() => setIsOpen(false)}
-                            className="block py-2 px-2 rounded hover:bg-gray-700 hover:text-cyan-400 transition-colors duration-150"
+                            className="block py-3 px-4 rounded-lg text-theme-secondary hover:bg-theme-secondary hover:text-cyan-500 transition-all duration-200"
                         >
                             {link.name}
                         </a>
