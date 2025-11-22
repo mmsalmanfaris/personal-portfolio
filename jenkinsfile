@@ -25,7 +25,7 @@ pipeline {
     steps {
         withCredentials([usernamePassword(credentialsId: 'cpanel-ftp-creds', usernameVariable: 'FTP_USER', passwordVariable: 'FTP_PASS')]) {
             sh '''
-                lftp -u "$FTP_USER","$FTP_PASS" -e "set ssl:verify-certificate no; mirror -R dist /; bye" ftp.digitalpartner.lk
+                lftp -u "$FTP_USER","$FTP_PASS" -e "set ssl:verify-certificate no; mirror -R dist /; bye" ftp.digitalpartner.ae
             '''
         }
     }
