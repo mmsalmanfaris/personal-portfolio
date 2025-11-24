@@ -7,12 +7,12 @@ export default function Projects() {
             name: "DevSecOps CI/CD Pipeline",
             description:
                 "An automated pipeline that reduced deployment errors, accelerated release cycles, and enforced security checks.",
-            tech: ["GitHub Actions", "Docker", "AWS", "ArgoCD", "K8s", "ghcr.io", "Trivy"],
+            tech: ["GitHub Actions", "Docker", "AWS", "ArgoCD"],
             github: "https://github.com/mmsalmanfaris/DevSecOps-GitHubAction-Pipeline",
             image: "/projects/devsecops.svg",
         },
         {
-            name: "DevOps E-Commerce Deployment",
+            name: "E-Commerce Deployment",
             description:
                 "Deployed a telemetry project with 12 microservices, Kubernetes, Ingress, and AWS Route 53 custom domain setup.",
             tech: ["K8s", "ArgoCD", "Terraform", "Docker", "AWS", "GitHub Action", "Route53"],
@@ -71,7 +71,7 @@ export default function Projects() {
                     {projects.map((project, index) => (
                         <div
                             key={index}
-                            className="group relative card-theme rounded-2xl overflow-hidden card-theme-hover transition-all duration-300 hover:-translate-y-2 hover:shadow-sm bg-gray-100"
+                            className="group relative rounded-2xl overflow-hidden bg-theme-primary hover:bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-sm bg-gray-500 border dark:border-slate-800"
                         >
                             {/* Project Image */}
                             <div className="relative h-48 overflow-hidden">
@@ -79,7 +79,7 @@ export default function Projects() {
                                 <img
                                     src={project.image}
                                     alt={project.name}
-                                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                    className="w-full h-full object-cover"
                                 />
                             </div>
 
@@ -96,7 +96,7 @@ export default function Projects() {
                                     {project.tech.slice(0, 4).map((tech, i) => (
                                         <span
                                             key={i}
-                                            className="px-2 py-1 rounded-md bg-theme-tertiary text-theme-secondary text-xs font-medium border border-theme"
+                                            className="px-2 py-1 rounded-md bg-theme-tertiary text-theme-secondary text-xs font-medium dark:border-slate-800"
                                         >
                                             {tech}
                                         </span>
@@ -117,7 +117,7 @@ export default function Projects() {
                                         className="flex items-center gap-2 text-sm font-medium text-theme-secondary hover:text-cyan-500 transition-colors"
                                     >
                                         <FaGithub size={16} />
-                                        <span>View Code</span>
+                                        <span>Explore</span>
                                     </a>
                                 </div>
                             </div>
