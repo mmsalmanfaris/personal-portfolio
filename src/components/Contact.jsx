@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Contact() {
     return (
-        <section id="contact" className="py-24 relative">
+        <section id="contact" className="py-24 relative bg-theme-primary">
             <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -11,7 +11,7 @@ export default function Contact() {
                             Get In Touch
                         </span>
                     </h2>
-                    <p className="text-slate-400 max-w-2xl mx-auto">
+                    <p className="text-theme-secondary max-w-2xl mx-auto">
                         Have a project in mind, want to collaborate, or just say hello?
                         Fill out the form below or book a call through Calendly.
                     </p>
@@ -19,10 +19,10 @@ export default function Contact() {
 
                 <div className="grid lg:grid-cols-2 gap-12 items-start">
                     {/* Contact Form */}
-                    <div className="bg-slate-900/50 border border-white/5 p-8 rounded-2xl shadow-xl">
+                    <div className="card-theme border border-theme p-8 rounded-2xl shadow-xl">
                         <form action="" method="POST" className="space-y-6">
                             <div>
-                                <label htmlFor="name" className="block text-sm font-medium text-slate-400 mb-2">
+                                <label htmlFor="name" className="block text-sm font-medium text-theme-secondary mb-2">
                                     Name
                                 </label>
                                 <input
@@ -31,12 +31,12 @@ export default function Contact() {
                                     name="name"
                                     placeholder="Your Full Name"
                                     required
-                                    className="w-full px-4 py-3 rounded-lg bg-slate-800/50 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all"
+                                    className="w-full px-4 py-3 rounded-lg bg-theme-tertiary border border-theme text-theme-primary placeholder-gray-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all"
                                 />
                             </div>
 
                             <div>
-                                <label htmlFor="email" className="block text-sm font-medium text-slate-400 mb-2">
+                                <label htmlFor="email" className="block text-sm font-medium text-theme-secondary mb-2">
                                     Email
                                 </label>
                                 <input
@@ -45,12 +45,12 @@ export default function Contact() {
                                     name="email"
                                     placeholder="example@domain.com"
                                     required
-                                    className="w-full px-4 py-3 rounded-lg bg-slate-800/50 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all"
+                                    className="w-full px-4 py-3 rounded-lg bg-theme-tertiary border border-theme text-theme-primary placeholder-gray-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all"
                                 />
                             </div>
 
                             <div>
-                                <label htmlFor="phone" className="block text-sm font-medium text-slate-400 mb-2">
+                                <label htmlFor="phone" className="block text-sm font-medium text-theme-secondary mb-2">
                                     Phone Number
                                 </label>
                                 <input
@@ -59,12 +59,12 @@ export default function Contact() {
                                     name="phone"
                                     placeholder="+1 (555) 000-0000"
                                     required
-                                    className="w-full px-4 py-3 rounded-lg bg-slate-800/50 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all"
+                                    className="w-full px-4 py-3 rounded-lg bg-theme-tertiary border border-theme text-theme-primary placeholder-gray-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all"
                                 />
                             </div>
 
                             <div>
-                                <label htmlFor="message" className="block text-sm font-medium text-slate-400 mb-2">
+                                <label htmlFor="message" className="block text-sm font-medium text-theme-secondary mb-2">
                                     Message
                                 </label>
                                 <textarea
@@ -73,7 +73,7 @@ export default function Contact() {
                                     rows="4"
                                     placeholder="How can I help you?"
                                     required
-                                    className="w-full px-4 py-3 rounded-lg bg-slate-800/50 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all resize-none"
+                                    className="w-full px-4 py-3 rounded-lg bg-theme-tertiary border border-theme text-theme-primary placeholder-gray-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all resize-none"
                                 ></textarea>
                             </div>
 
@@ -87,7 +87,7 @@ export default function Contact() {
                     </div>
 
                     {/* Calendly Widget */}
-                    <div className="w-full hidden lg:block bg-slate-900/50 border border-white/5 p-4 rounded-2xl shadow-xl h-full min-h-[600px]">
+                    <div className="w-full hidden lg:block card-theme border border-theme p-4 rounded-2xl shadow-xl h-full min-h-[600px]">
                         <div
                             className="calendly-inline-widget w-full h-full rounded-xl overflow-hidden"
                             data-url="https://calendly.com/mmsalmanfaaris01/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=0f172a&text_color=f8fafc&primary_color=06b6d4"
