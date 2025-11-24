@@ -18,7 +18,7 @@ export default function Navbar() {
 
     return (
         <nav
-            className="fixed top-0 left-0 w-full z-50 transition-all duration-300 backdrop-blur-md border-b shadow-sm bg-theme-primary/90 border-theme"
+            className="fixed top-0 left-0 w-full z-50 transition-all duration-300 backdrop-blur-xl shadow-sm bg-theme-primary/90 border-theme"
             role="navigation"
             aria-label="Main Navigation"
         >
@@ -26,7 +26,7 @@ export default function Navbar() {
                 <div className="flex justify-between items-center h-16 md:h-20">
                     <a href="/" className="flex items-center group">
                         <img
-                            src="/logo.png"
+                            src={theme === 'dark' ? "/logo-w.png" : "/logo-b.png"}
                             alt="Site logo"
                             className="h-8 md:h-10 object-contain"
                         />
@@ -41,7 +41,7 @@ export default function Navbar() {
                                 className="font-medium text-sm md:text-base text-theme-secondary hover:text-cyan-500 transition-colors duration-200 relative group"
                             >
                                 {link.name}
-                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-500 transition-all duration-300 group-hover:w-full"></span>
+                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-blue-600 transition-all duration-200 group-hover:w-full"></span>
                             </a>
                         ))}
                     </div>
@@ -49,7 +49,7 @@ export default function Navbar() {
                     {/* Theme Toggle Button */}
                     <button
                         onClick={toggleTheme}
-                        className="p-2 rounded-full text-theme-secondary hover:text-cyan-500 hover:bg-cyan-500/10 transition-all duration-300 hidden md:block"
+                        className="p-2 rounded-full text-theme-secondary hover:text-cyan-200 hover:bg-cyan-500/50 transition-all duration-300 hidden md:block"
                         aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
                     >
                         {theme === 'dark' ? (
@@ -64,7 +64,7 @@ export default function Navbar() {
                         {/* Theme Toggle for Mobile */}
                         <button
                             onClick={toggleTheme}
-                            className="p-2 rounded-full text-theme-secondary hover:text-cyan-500 hover:bg-cyan-500/10 transition-all duration-300"
+                            className="p-2 rounded-full text-theme-secondary hover:text-cyan-200 hover:bg-cyan-500/50 transition-all duration-300"
                             aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
                         >
                             {theme === 'dark' ? (
