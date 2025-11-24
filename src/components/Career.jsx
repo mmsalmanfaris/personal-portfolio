@@ -81,7 +81,7 @@ export default function Career() {
     const data = tabs[activeTab];
 
     return (
-        <section id="career" className="py-24 relative">
+        <section id="career" className="py-24 relative bg-theme-primary">
             <div className="max-w-4xl mx-auto px-6 sm:px-12 lg:px-16">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -89,14 +89,14 @@ export default function Career() {
                             Career Journey
                         </span>
                     </h2>
-                    <div className="flex justify-center gap-8 border-b border-gray-700 pb-2">
+                    <div className="flex justify-center gap-8 border-b border-theme pb-2">
                         {["certifications", "experience", "education"].map((tab) => (
                             <button
                                 key={tab}
                                 onClick={() => setActiveTab(tab)}
                                 className={`px-6 py-2.5 rounded-full font-medium transition-all duration-300 ${activeTab === tab
-                                        ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/30"
-                                        : "bg-slate-900/50 text-slate-400 border border-white/5 hover:border-cyan-500/30 hover:text-cyan-400"
+                                    ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/30"
+                                    : "bg-theme-tertiary text-theme-secondary border border-theme hover:border-cyan-500/30 hover:text-cyan-500"
                                     }`}
                             >
                                 {tab.charAt(0).toUpperCase() + tab.slice(1)}
@@ -117,14 +117,14 @@ export default function Career() {
                                 } gap-8`}
                         >
                             {/* Timeline Dot */}
-                            <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-slate-950 transform md:-translate-x-1/2 shadow-lg shadow-cyan-500/50 z-10"></div>
+                            <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-theme transform md:-translate-x-1/2 shadow-lg shadow-cyan-500/50 z-10"></div>
 
                             {/* Spacer for desktop */}
                             <div className="hidden md:block flex-1"></div>
 
                             {/* Card */}
                             <div className="flex-1 ml-8 md:ml-0 group">
-                                <div className="bg-slate-900/50 border border-white/5 rounded-2xl p-6 hover:border-cyan-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-cyan-500/10">
+                                <div className="card-theme border border-theme rounded-2xl p-6 card-theme-hover transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                                     <div className="flex items-start gap-4">
                                         {/* Image */}
                                         <div className="flex-shrink-0 w-16 h-16 bg-white rounded-xl p-2 shadow-md">
@@ -137,13 +137,13 @@ export default function Career() {
 
                                         {/* Content */}
                                         <div className="flex-1 min-w-0">
-                                            <h3 className="text-lg font-bold text-white mb-1 group-hover:text-cyan-400 transition-colors">
+                                            <h3 className="text-lg font-bold text-theme-primary mb-1 group-hover:text-cyan-500 transition-colors">
                                                 {item.title}
                                             </h3>
-                                            <p className="text-sm font-medium text-cyan-400 mb-1">
+                                            <p className="text-sm font-medium text-cyan-500 mb-1">
                                                 {item.institution || item.company}
                                             </p>
-                                            <p className="text-xs text-slate-500">
+                                            <p className="text-xs text-theme-tertiary">
                                                 {item.year || item.period}
                                             </p>
                                         </div>

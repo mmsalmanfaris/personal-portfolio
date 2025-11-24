@@ -6,7 +6,7 @@ export default function Hero() {
     return (
         <section
             id="home"
-            className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 bg-theme-primary"
+            className="relative min-h-screen flex items-center justify-center overflow-hidden py-14 bg-theme-primary"
         >
             {/* Background Glow - theme aware */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full blur-[120px] -z-10 dark:bg-cyan-500/20 light:bg-cyan-100/40"></div>
@@ -26,7 +26,7 @@ export default function Hero() {
                         </span>
                     </h1>
                     <p className="text-theme-secondary text-lg sm:text-xl md:text-2xl mb-8 leading-relaxed max-w-2xl mx-auto md:mx-0">
-                        Software Engineer (Ops) specializing in <span className="text-cyan-500 font-medium">automation</span>, <span className="text-cyan-500 font-medium">monitoring</span>, and <span className="text-cyan-500 font-medium">system reliability</span>. Building resilient cloud platforms with modern DevOps practices.
+                        DevOps & CloudOps Engineer driving automated, scalable infrastructure with a strong focus on cost-efficient <span className="text-cyan-500 font-medium">FinOps practices.</span>
                     </p>
 
                     {/* Call to Action Buttons */}
@@ -36,7 +36,7 @@ export default function Hero() {
                             href="/resume.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="relative px-8 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-1 transition-all duration-300"
+                            className="relative px-8 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/50 transition-all duration-300"
                         >
                             Resume
                         </a>
@@ -53,7 +53,7 @@ export default function Hero() {
                                     href={social.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="p-3 rounded-full border border-theme text-theme-secondary hover:text-cyan-500 hover:border-cyan-500 hover:bg-cyan-500/10 transition-all duration-300"
+                                    className="p-3 rounded-full border border-theme hover:text-cyan-500 hover:border-cyan-500 hover:bg-cyan-500/10 transition-all duration-300"
                                 >
                                     <social.icon size={20} />
                                 </a>
@@ -64,17 +64,17 @@ export default function Hero() {
 
                 {/* Right: Image */}
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
+                    initial={{ opacity: 0, scale: 1 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                     className="flex-1 flex justify-center md:justify-end relative"
                 >
                     <div className="relative w-64 sm:w-80 md:w-96 aspect-square">
-                        <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500 to-blue-600 rounded-full opacity-20 blur-3xl animate-pulse"></div>
+                        <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500 to-blue-600 rounded-full opacity-25 blur-3xl animate-pulse"></div>
                         <img
                             src="/profile.webp"
                             alt="MM Salman Faris"
-                            className="relative w-full h-full object-cover rounded-2xl rotate-3 hover:rotate-0 transition-transform duration-500 shadow-2xl shadow-cyan-500/20 dark:border dark:border-white/10 light:border-4 light:border-white"
+                            className="relative w-full h-full object-cover rounded-2xl shadow-2xl shadow-cyan-500/20 dark:border dark:border-white/10 light:border-4 light:border-white"
                         />
                     </div>
                 </motion.div>
