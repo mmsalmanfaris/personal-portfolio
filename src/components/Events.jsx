@@ -52,7 +52,7 @@ export default function Events() {
     ];
 
     return (
-        <section id="events" className="py-24 relative">
+        <section id="events" className="py-24 relative bg-theme-secondary">
             <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -60,7 +60,7 @@ export default function Events() {
                             Events I Conducted
                         </span>
                     </h2>
-                    <p className="text-slate-400 max-w-2xl mx-auto">
+                    <p className="text-theme-secondary max-w-2xl mx-auto">
                         Workshops, hands-on labs, and tech talks I've delivered to share knowledge with the community.
                     </p>
                 </div>
@@ -79,10 +79,10 @@ export default function Events() {
                 >
                     {eventsData.map((event, index) => (
                         <SwiperSlide key={index}>
-                            <div className="group bg-slate-900/50 border border-white/5 rounded-2xl overflow-hidden hover:border-cyan-500/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-cyan-500/10 h-full">
+                            <div className="group card-theme rounded-2xl overflow-hidden card-theme-hover transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full">
                                 {/* Event Image */}
                                 <div className="relative h-56 overflow-hidden">
-                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent z-10"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-theme-primary via-theme-primary/50 to-transparent z-10"></div>
                                     <img
                                         src={event.image}
                                         alt={event.title}
@@ -93,12 +93,12 @@ export default function Events() {
                                 {/* Event Content */}
                                 <div className="p-6 relative z-20">
                                     <div className="flex items-center justify-between mb-3">
-                                        <span className="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-medium border border-cyan-500/20">
+                                        <span className="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-500 text-xs font-medium border border-cyan-500/20">
                                             {event.role}
                                         </span>
-                                        <span className="text-xs text-slate-500">{event.date}</span>
+                                        <span className="text-xs text-theme-tertiary">{event.date}</span>
                                     </div>
-                                    <h3 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors leading-tight">
+                                    <h3 className="text-lg font-bold text-theme-primary group-hover:text-cyan-500 transition-colors leading-tight">
                                         {event.title}
                                     </h3>
                                 </div>

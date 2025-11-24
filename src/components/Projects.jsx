@@ -54,7 +54,7 @@ export default function Projects() {
     ];
 
     return (
-        <section id="projects" className="py-24 relative">
+        <section id="projects" className="py-24 relative bg-theme-secondary">
             <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -62,7 +62,7 @@ export default function Projects() {
                             Featured Projects
                         </span>
                     </h2>
-                    <p className="text-slate-400 max-w-2xl mx-auto">
+                    <p className="text-theme-secondary max-w-2xl mx-auto">
                         A selection of projects demonstrating my expertise in DevOps, Cloud, and Full Stack Development.
                     </p>
                 </div>
@@ -71,11 +71,11 @@ export default function Projects() {
                     {projects.map((project, index) => (
                         <div
                             key={index}
-                            className="group relative bg-slate-900/50 border border-white/5 rounded-2xl overflow-hidden hover:border-cyan-500/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-cyan-500/10"
+                            className="group relative card-theme rounded-2xl overflow-hidden card-theme-hover transition-all duration-300 hover:-translate-y-2 hover:shadow-sm bg-gray-100"
                         >
                             {/* Project Image */}
                             <div className="relative h-48 overflow-hidden">
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent z-10 opacity-60"></div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-theme-primary to-transparent z-10 opacity-60"></div>
                                 <img
                                     src={project.image}
                                     alt={project.name}
@@ -85,10 +85,10 @@ export default function Projects() {
 
                             {/* Project Info */}
                             <div className="p-6 relative z-20">
-                                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                                <h3 className="text-xl font-bold text-theme-primary mb-3 group-hover:text-cyan-500 transition-colors">
                                     {project.name}
                                 </h3>
-                                <p className="text-slate-400 text-sm mb-6 line-clamp-3">
+                                <p className="text-theme-secondary text-sm mb-6 line-clamp-3">
                                     {project.description}
                                 </p>
 
@@ -96,25 +96,25 @@ export default function Projects() {
                                     {project.tech.slice(0, 4).map((tech, i) => (
                                         <span
                                             key={i}
-                                            className="px-2 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700"
+                                            className="px-2 py-1 rounded-md bg-theme-tertiary text-theme-secondary text-xs font-medium border border-theme"
                                         >
                                             {tech}
                                         </span>
                                     ))}
                                     {project.tech.length > 4 && (
-                                        <span className="px-2 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">
+                                        <span className="px-2 py-1 rounded-md bg-theme-tertiary text-theme-secondary text-xs font-medium border border-theme">
                                             +{project.tech.length - 4}
                                         </span>
                                     )}
                                 </div>
 
                                 {/* Links */}
-                                <div className="flex items-center justify-between pt-4 border-t border-white/5">
+                                <div className="flex items-center justify-between pt-4 border-t border-theme">
                                     <a
                                         href={project.github}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-cyan-400 transition-colors"
+                                        className="flex items-center gap-2 text-sm font-medium text-theme-secondary hover:text-cyan-500 transition-colors"
                                     >
                                         <FaGithub size={16} />
                                         <span>View Code</span>
