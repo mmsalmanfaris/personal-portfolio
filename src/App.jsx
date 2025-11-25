@@ -9,6 +9,7 @@ import Career from "./components/Career";
 import Events from "./components/Events";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Chatbot from "./components/Chatbot";
 
 function App() {
   const [showPortfolio, setShowPortfolio] = useState(false);
@@ -37,12 +38,14 @@ function App() {
             <Hero />
             <Skills />
             <Projects />
-            {/* <Career /> */}
+            <Career />
             <Events />
             <Contact />
           </main>
-
           <Footer />
+
+          {/* AI Chatbot - Always visible */}
+          <Chatbot />
         </>
       )}
     </div>
