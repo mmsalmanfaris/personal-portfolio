@@ -70,15 +70,14 @@ GUIDELINES:
         setIsLoading(true);
 
         try {
-            // Call Groq API
-            const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+            // Forward request to server-side proxy to keep API key secret
+            const response = await fetch(`/api/chat.php`, {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": `Bearer ${import.meta.env.VITE_GROQ_API_KEY}` // We'll add this
+                    "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    model: "llama-3.1-8b-instant", // Fast & free model
+                    model: "llama-3.1-8b-instant",
                     messages: [
                         { role: "system", content: getSystemPrompt() },
                         ...messages.filter(m => m.role !== "assistant" || m.content !== messages[0].content),
@@ -91,11 +90,13 @@ GUIDELINES:
             });
 
             if (!response.ok) {
-                throw new Error("API request failed");
+                const bodyText = await response.text();
+                throw new Error(`Proxy error: ${response.status} ${bodyText}`);
             }
 
             const data = await response.json();
-            const aiResponse = data.choices[0].message.content;
+            // Support Groq/OpenAI-style response and fallback
+            const aiResponse = data?.choices?.[0]?.message?.content || data?.message || JSON.stringify(data);
 
             setMessages(prev => [...prev, {
                 role: "assistant",
@@ -105,7 +106,7 @@ GUIDELINES:
             console.error("Chat error:", error);
             setMessages(prev => [...prev, {
                 role: "assistant",
-                content: "Sorry, I'm having trouble connecting. Please try again or contact Salman directly at " + portfolioData.contact.email
+                content: `Sorry, I'm having trouble connecting. Please try again or visit ${portfolioContext.profile.website}`
             }]);
         } finally {
             setIsLoading(false);
