@@ -8,6 +8,12 @@ import "swiper/css/pagination";
 export default function Events() {
     const eventsData = [
         {
+            title: "Gap between Industry and Academia",
+            role: "Workshop",
+            date: "Nov 2025",
+            image: "/event/eight_event.webp"
+        },
+        {
             title: "Cloud Computing & Developer Tools",
             role: "Workshop",
             date: "Sep 2025",
