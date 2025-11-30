@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Career() {
-    const [activeTab, setActiveTab] = useState("certifications");
+    const [activeTab, setActiveTab] = useState("certification");
 
     const certificationData = [
         {
@@ -73,7 +73,7 @@ export default function Career() {
     ];
 
     const tabs = {
-        certifications: certificationData,
+        certification: certificationData,
         experience: experienceData,
         education: educationData,
     };
@@ -89,8 +89,8 @@ export default function Career() {
                             Career Journey
                         </span>
                     </h2>
-                    <div className="flex justify-center gap-8 border-b border-theme pb-2">
-                        {["certifications", "experience", "education"].map((tab) => (
+                    <div className="flex justify-center gap-2 md:gap-8 border-b border-theme pb-2">
+                        {["certification", "experience", "education"].map((tab) => (
                             <button
                                 key={tab}
                                 onClick={() => setActiveTab(tab)}

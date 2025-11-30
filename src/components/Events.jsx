@@ -85,14 +85,14 @@ export default function Events() {
                 >
                     {eventsData.map((event, index) => (
                         <SwiperSlide key={index}>
-                            <div className="group card-theme rounded-2xl overflow-hidden card-theme-hover transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full">
+                            <div className="bg-theme-primary rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 h-full">
                                 {/* Event Image */}
                                 <div className="relative h-56 overflow-hidden">
                                     <div className="absolute inset-0 bg-gradient-to-t from-theme-primary via-theme-primary/50 to-transparent z-10"></div>
                                     <img
                                         src={event.image}
                                         alt={event.title}
-                                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                        className="w-full h-full object-cover"
                                     />
                                 </div>
 

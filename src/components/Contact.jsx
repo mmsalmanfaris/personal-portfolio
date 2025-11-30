@@ -43,7 +43,7 @@ export default function Contact() {
                                     type="email"
                                     id="email"
                                     name="email"
-                                    placeholder="example@domain.com"
+                                    placeholder="example@gmail.com"
                                     required
                                     className="w-full px-4 py-3 rounded-lg bg-theme-tertiary border border-theme text-theme-primary placeholder-gray-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all"
                                 />
@@ -57,7 +57,7 @@ export default function Contact() {
                                     type="tel"
                                     id="phone"
                                     name="phone"
-                                    placeholder="+1 (555) 000-0000"
+                                    placeholder="+94 123456789"
                                     required
                                     className="w-full px-4 py-3 rounded-lg bg-theme-tertiary border border-theme text-theme-primary placeholder-gray-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all"
                                 />

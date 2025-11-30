@@ -9,9 +9,6 @@ export default function Footer() {
                     {/* Left side */}
                     <div className="flex items-center gap-2 text-theme-secondary text-sm">
                         <span>&copy; {new Date().getFullYear()} mmsalmanfaris.</span>
-                        <span className="hidden sm:inline">Built with</span>
-                        <FaHeart className="text-cyan-500 animate-pulse" size={14} />
-                        <span className="hidden sm:inline">and React</span>
                     </div>
 
                     {/* Right side - social links */}
