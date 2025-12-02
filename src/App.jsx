@@ -13,6 +13,7 @@ import Chatbot from "./components/Chatbot";
 
 function App() {
   const [showPortfolio, setShowPortfolio] = useState(false);
+  const [isChatMode, setIsChatMode] = useState(false);
 
   useEffect(() => {
     // Show the portfolio after 3 seconds (duration of animation)
@@ -32,20 +33,22 @@ function App() {
       ) : (
         // Portfolio sections
         <>
-          <Navbar />
+          {/* Hide portfolio content when in chat mode */}
+          <div className={isChatMode ? "hidden" : "block"}>
+            <Navbar />
+            <main className="pt-16">
+              <Hero />
+              <Skills />
+              <Projects />
+              <Career />
+              <Events />
+              <Contact />
+            </main>
+            <Footer />
+          </div>
 
-          <main className="pt-16">
-            <Hero />
-            <Skills />
-            <Projects />
-            <Career />
-            <Events />
-            <Contact />
-          </main>
-          <Footer />
-
-          {/* AI Chatbot - Always visible */}
-          <Chatbot />
+          {/* AI Chatbot - Handles its own display modes (button vs full screen) */}
+          <Chatbot isChatMode={isChatMode} setIsChatMode={setIsChatMode} />
         </>
       )}
     </div>
