@@ -1,83 +1,97 @@
-// Hero.jsx - Premium theme-aware version
-import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { FaArrowRight, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+import * as Motion from "framer-motion";
 
 export default function Hero() {
+    const socials = [
+        { icon: FaLinkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/mmsalmanfaris/" },
+        { icon: FaGithub, label: "GitHub", href: "https://github.com/mmsalmanfaris" },
+        { icon: FaFacebook, label: "Facebook", href: "https://www.facebook.com/mmsalmanfaris" },
+    ];
+
+    const metrics = [
+        { value: "12+", label: "Cloud and DevOps projects" },
+        { value: "8", label: "Technical sessions delivered" },
+        { value: "6", label: "Professional certifications" },
+    ];
+
     return (
-        <section
-            id="home"
-            className="relative min-h-screen flex items-center justify-center overflow-hidden py-14 bg-theme-primary"
-        >
-            {/* Background Glow - theme aware */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full blur-[120px] -z-10 dark:bg-cyan-500/20 light:bg-cyan-100/40"></div>
-
-            <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 flex flex-col-reverse md:flex-row items-center gap-12">
-                {/* Left: Text */}
-                <motion.div
-                    initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="flex-1 text-center md:text-left"
+        <section id="home" className="min-h-screen bg-theme-primary pt-28">
+            <div className="mx-auto grid max-w-7xl gap-12 px-5 pb-20 sm:px-8 lg:grid-cols-[1.08fr_0.92fr] lg:px-10">
+                <Motion.motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7, ease: "easeOut" }}
+                    className="flex flex-col justify-between gap-12"
                 >
-                    <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 tracking-tight text-theme-primary">
-                        Hi, I'm <br />
-                        <span className="text-gradient">
-                            Salman Faris
-                        </span>
-                    </h1>
-                    <p className="text-theme-secondary text-lg sm:text-xl md:text-2xl mb-8 leading-relaxed max-w-2xl mx-auto md:mx-0">
-                        DevOps & CloudOps Engineer driving automated, scalable infrastructure with a strong focus on cost-efficient <span className="text-cyan-500 font-medium">FinOps practices.</span>
-                    </p>
+                    <div>
+                        <p className="section-kicker mb-6">MM Salman Faris</p>
+                        <h1 className="max-w-5xl text-[clamp(3.25rem,10vw,8.75rem)] font-bold leading-[0.86] tracking-normal text-theme-primary">
+                            Cloud DevOps Engineer.
+                        </h1>
+                    </div>
 
-                    {/* Call to Action Buttons */}
-                    <div className="flex flex-wrap justify-center md:justify-start gap-6">
-                        {/* Resume Button */}
-                        <a
-                            href="/resume.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="relative px-8 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/50 transition-all duration-300"
-                        >
-                            Resume
-                        </a>
-
-                        {/* Social Icons */}
-                        <div className="flex gap-4">
-                            {[
-                                { icon: FaLinkedin, href: "https://www.linkedin.com/in/mmsalmanfaris/" },
-                                { icon: FaGithub, href: "https://github.com/mmsalmanfaris" },
-                                { icon: FaFacebook, href: "https://www.facebook.com/mmsalmanfaris" }
-                            ].map((social, index) => (
-                                <a
-                                    key={index}
-                                    href={social.href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="p-3 rounded-full border border-theme hover:text-cyan-500 hover:border-cyan-500 hover:bg-cyan-500/10 transition-all duration-300"
-                                >
-                                    <social.icon size={20} />
+                    <div className="grid gap-8 border-y border-theme py-8 md:grid-cols-[0.95fr_1.05fr]">
+                        <p className="section-copy text-lg">
+                            I build reliable delivery systems, scalable cloud infrastructure, and cost-aware operations for teams that need production to feel calm.
+                        </p>
+                        <div className="space-y-5">
+                            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-theme-tertiary">
+                                DevOps / CloudOps / FinOps
+                            </p>
+                            <div className="flex flex-wrap gap-3">
+                                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="premium-button premium-button-primary">
+                                    Resume <FaArrowRight size={13} />
                                 </a>
-                            ))}
+                                <a href="#projects" className="premium-button premium-button-secondary">
+                                    View Work
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </motion.div>
+                </Motion.motion.div>
 
-                {/* Right: Image */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 1 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                    className="flex-1 flex justify-center md:justify-end relative"
+                <Motion.motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+                    className="flex flex-col gap-6"
                 >
-                    <div className="relative w-64 sm:w-80 md:w-96 aspect-square">
-                        <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500 to-blue-600 rounded-full opacity-25 blur-3xl animate-pulse"></div>
+                    <div className="relative overflow-hidden border border-theme bg-theme-secondary">
                         <img
                             src="/profile.webp"
                             alt="MM Salman Faris"
-                            className="relative w-full h-full object-cover rounded-2xl shadow-2xl shadow-cyan-500/20 dark:border dark:border-white/10 light:border-4 light:border-white"
+                            className="aspect-[4/5] h-full w-full object-cover grayscale"
                         />
+                        <div className="absolute bottom-0 left-0 right-0 border-t border-white/20 bg-black/75 p-5 text-white backdrop-blur">
+                            <p className="text-sm uppercase tracking-[0.18em] text-white/60">Available for</p>
+                            <p className="mt-1 text-xl font-semibold">Cloud automation, CI/CD, and platform operations</p>
+                        </div>
                     </div>
-                </motion.div>
+
+                    <div className="grid grid-cols-3 border border-theme">
+                        {metrics.map((metric) => (
+                            <div key={metric.label} className="border-r border-theme p-4 last:border-r-0">
+                                <p className="text-2xl font-bold text-theme-primary">{metric.value}</p>
+                                <p className="mt-1 text-xs leading-5 text-theme-tertiary">{metric.label}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="flex gap-3">
+                        {socials.map((social) => (
+                            <a
+                                key={social.label}
+                                href={social.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={social.label}
+                                className="flex h-11 w-11 items-center justify-center rounded-full border border-theme text-theme-secondary transition-colors hover:border-theme-primary hover:bg-theme-secondary hover:text-theme-primary"
+                            >
+                                <social.icon size={18} />
+                            </a>
+                        ))}
+                    </div>
+                </Motion.motion.div>
             </div>
         </section>
     );

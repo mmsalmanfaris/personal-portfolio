@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 import { FaRobot, FaTimes, FaPaperPlane, FaPlus, FaArrowLeft, FaUser, FaBars } from "react-icons/fa";
-import { HiSparkles } from "react-icons/hi";
 import { portfolioContext } from "../data/portfolioContext";
 
 export default function Chatbot({ isChatMode, setIsChatMode }) {
@@ -134,11 +133,11 @@ GUIDELINES:
             >
                 {/* Pulse ring */}
                 <div className="absolute inset-0 pointer-events-none rounded-full">
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full animate-ping opacity-50"></div>
+                    <div className="absolute inset-0 rounded-full bg-theme-primary opacity-30 animate-ping"></div>
                 </div>
                 {/* Button */}
-                <div className="relative w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full shadow-lg hover:shadow-2xl transition-transform duration-200 hover:scale-110 flex items-center justify-center ring-2 ring-transparent focus:outline-none focus-visible:ring-white/30">
-                    <FaRobot size={28} className="text-white drop-shadow-lg" />
+                <div className="relative flex h-16 w-16 items-center justify-center rounded-full border border-theme bg-theme-primary text-theme-primary shadow-lg transition-transform duration-200 hover:scale-105">
+                    <FaRobot size={26} />
                 </div>
             </button>
         );
@@ -156,10 +155,10 @@ GUIDELINES:
                 <div className="flex flex-col h-full p-4">
                     {/* Sidebar Header */}
                     <div className="flex items-center gap-3 mb-8 px-2">
-                        <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center">
-                            <FaRobot className="text-white text-sm" />
+                        <div className="w-8 h-8 rounded-full border border-theme bg-theme-primary flex items-center justify-center">
+                            <FaRobot className="text-theme-primary text-sm" />
                         </div>
-                        <span className="font-bold text-lg tracking-tight">Portfolio Ai</span>
+                        <span className="font-bold text-lg tracking-tight">Portfolio AI</span>
                         <button
                             onClick={() => setShowSidebar(false)}
                             className="md:hidden ml-auto text-theme-secondary"
@@ -174,9 +173,9 @@ GUIDELINES:
                             clearChat();
                             setShowSidebar(false);
                         }}
-                        className="flex items-center gap-3 w-full px-4 py-3 rounded-xl border border-theme hover:bg-theme-tertiary transition-colors mb-4 text-sm font-medium"
+                        className="flex items-center gap-3 w-full px-4 py-3 rounded-full border border-theme hover:bg-theme-tertiary transition-colors mb-4 text-sm font-medium"
                     >
-                        <FaPlus className="text-cyan-500" />
+                        <FaPlus className="text-theme-tertiary" />
                         New Chat
                     </button>
 
@@ -184,7 +183,7 @@ GUIDELINES:
                     <div className="mt-auto space-y-2">
                         <button
                             onClick={() => setIsChatMode(false)}
-                            className="flex items-center gap-3 w-full px-4 py-3 rounded-xl hover:bg-theme-tertiary transition-colors text-sm font-medium text-theme-secondary hover:text-theme-primary"
+                            className="flex items-center gap-3 w-full px-4 py-3 rounded-full hover:bg-theme-tertiary transition-colors text-sm font-medium text-theme-secondary hover:text-theme-primary"
                         >
                             <FaArrowLeft />
                             Back to Portfolio
@@ -221,14 +220,14 @@ GUIDELINES:
                             <div key={idx} className={`flex gap-4 ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
                                 {/* Avatar (Assistant) */}
                                 {msg.role === "assistant" && (
-                                    <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex-shrink-0 flex items-center justify-center mt-1">
-                                        <FaRobot className="text-white text-xs" />
+                                    <div className="w-8 h-8 rounded-full border border-theme bg-theme-secondary flex-shrink-0 flex items-center justify-center mt-1">
+                                        <FaRobot className="text-theme-primary text-xs" />
                                     </div>
                                 )}
 
                                 {/* Message Bubble */}
-                                <div className={`max-w-[85%] md:max-w-[75%] rounded-2xl px-5 py-3.5 shadow-sm text-sm md:text-base leading-relaxed ${msg.role === "user"
-                                    ? "bg-theme-tertiary text-theme-primary rounded-br-none"
+                                <div className={`max-w-[85%] md:max-w-[75%] rounded-2xl px-5 py-3.5 text-sm md:text-base leading-relaxed ${msg.role === "user"
+                                    ? "bg-theme-tertiary text-theme-primary border border-theme"
                                     : "bg-transparent text-theme-primary pl-0 pt-1"
                                     }`}>
                                     {/* User Avatar (Optional, visually distinct) */}
@@ -251,13 +250,13 @@ GUIDELINES:
                         {/* Loading Indicator */}
                         {isLoading && (
                             <div className="flex gap-4">
-                                <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex-shrink-0 flex items-center justify-center mt-1">
-                                    <FaRobot className="text-white text-xs" />
+                                <div className="w-8 h-8 rounded-full border border-theme bg-theme-secondary flex-shrink-0 flex items-center justify-center mt-1">
+                                    <FaRobot className="text-theme-primary text-xs" />
                                 </div>
                                 <div className="flex items-center gap-1.5 pt-2 pl-1">
-                                    <span className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce"></span>
-                                    <span className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce delay-150"></span>
-                                    <span className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce delay-300"></span>
+                                    <span className="w-2 h-2 bg-theme-primary rounded-full animate-bounce"></span>
+                                    <span className="w-2 h-2 bg-theme-primary rounded-full animate-bounce delay-150"></span>
+                                    <span className="w-2 h-2 bg-theme-primary rounded-full animate-bounce delay-300"></span>
                                 </div>
                             </div>
                         )}
@@ -273,23 +272,23 @@ GUIDELINES:
                                 e.preventDefault();
                                 handleSend();
                             }}
-                            className="relative flex items-end gap-2 bg-theme-tertiary border border-theme rounded-3xl p-2 shadow-sm focus-within:ring-2 focus-within:ring-cyan-500/50 transition-all"
+                            className="relative flex items-end gap-2 bg-theme-tertiary border border-theme rounded-full p-2 shadow-sm focus-within:border-theme-primary transition-all"
                         >
                             <input
                                 ref={inputRef}
                                 value={input}
                                 onChange={(e) => setInput(e.target.value)}
                                 onKeyDown={handleKeyPress}
-                                placeholder="Message Portfolio Ai..."
+                                placeholder="Message Portfolio AI..."
                                 disabled={isLoading}
                                 rows={1}
-                                className="w-full bg-transparent b py-3 px-4 max-h-32 min-h-[48px] text-theme-primary placeholder-theme-secondary/70 custom-scrollbar"
+                                className="w-full bg-transparent py-3 px-4 max-h-32 min-h-[48px] text-theme-primary placeholder:text-theme-tertiary custom-scrollbar focus:outline-none"
                                 style={{ height: 'auto', minHeight: '48px' }}
                             />
                             <button
                                 type="submit"
                                 disabled={!input.trim() || isLoading}
-                                className="p-2.5 mb-1 mr-1 bg-cyan-500 hover:bg-cyan-600 disabled:bg-gray-400 text-white rounded-full transition-colors flex-shrink-0"
+                                className="p-2.5 mb-1 mr-1 bg-theme-primary text-theme-primary border border-theme disabled:opacity-40 rounded-full transition-colors flex-shrink-0"
                             >
                                 <FaPaperPlane size={16} />
                             </button>
