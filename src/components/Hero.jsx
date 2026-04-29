@@ -76,21 +76,6 @@ export default function Hero() {
                             </div>
                         ))}
                     </div>
-
-                    <div className="flex gap-3">
-                        {socials.map((social) => (
-                            <a
-                                key={social.label}
-                                href={social.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label={social.label}
-                                className="flex h-11 w-11 items-center justify-center rounded-full border border-theme text-theme-secondary transition-colors hover:border-theme-primary hover:bg-theme-secondary hover:text-theme-primary"
-                            >
-                                <social.icon size={18} />
-                            </a>
-                        ))}
-                    </div>
                 </Motion.motion.div>
             </div>
         </section>

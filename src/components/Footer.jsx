@@ -20,7 +20,7 @@ export default function Footer() {
                     <a href="https://linkedin.com/in/mmsalmanfaris" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full border border-theme text-theme-secondary hover:text-theme-primary" aria-label="LinkedIn">
                         <FaLinkedin size={17} />
                     </a>
-                    <a href="mailto:mmsalmanfaaris01@gmail.com" className="flex h-10 w-10 items-center justify-center rounded-full border border-theme text-theme-secondary hover:text-theme-primary" aria-label="Email">
+                    <a href="mailto:mmsalmanfaris@outlook.com" className="flex h-10 w-10 items-center justify-center rounded-full border border-theme text-theme-secondary hover:text-theme-primary" aria-label="Email">
                         <FaEnvelope size={17} />
                     </a>
                 </div>
