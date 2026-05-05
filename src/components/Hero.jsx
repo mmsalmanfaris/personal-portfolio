@@ -56,11 +56,11 @@ export default function Hero() {
                     transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
                     className="flex flex-col gap-6"
                 >
-                    <div className="relative overflow-hidden border border-theme bg-theme-secondary">
+                    <div className="group relative overflow-hidden border border-theme bg-theme-secondary">
                         <img
                             src="/profile.webp"
                             alt="MM Salman Faris"
-                            className="aspect-[4/5] h-full w-full object-cover grayscale"
+                            className="aspect-[4/5] h-full w-full object-cover grayscale transition duration-500 ease-out group-hover:scale-105 group-hover:grayscale-0"
                         />
                         <div className="absolute bottom-0 left-0 right-0 border-t border-white/20 bg-black/75 p-5 text-white backdrop-blur">
                             <p className="text-sm uppercase tracking-[0.18em] text-white/60">Available for</p>

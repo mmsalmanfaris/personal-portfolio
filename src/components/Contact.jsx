@@ -2,7 +2,7 @@ import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Contact() {
     const links = [
-        { label: "Email", href: "mailto:mmsalmanfaaris01@gmail.com", icon: FaEnvelope },
+        { label: "Email", href: "mailto:mmsalmanfaris@outlook.com", icon: FaEnvelope },
         { label: "LinkedIn", href: "https://linkedin.com/in/mmsalmanfaris", icon: FaLinkedin },
         { label: "GitHub", href: "https://github.com/mmsalmanfaris", icon: FaGithub },
     ];

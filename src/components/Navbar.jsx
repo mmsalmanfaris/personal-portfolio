@@ -30,12 +30,9 @@ export default function Navbar() {
                             alt="Site logo"
                             className="h-7 object-contain"
                         />
-                        <span className="hidden sm:inline text-xs uppercase tracking-[0.28em] text-theme-tertiary">
-                            Cloud DevOps
-                        </span>
                     </a>
 
-                    <div className="hidden md:flex items-center rounded-full border border-theme bg-theme-secondary/70 px-2 py-1">
+                    <div className="hidden md:flex items-center bg-theme-secondary/70 px-2 py-1">
                         {navLinks.map((link) => (
                             <a
                                 key={link.name}

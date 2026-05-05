@@ -18,8 +18,8 @@ export default function Career() {
     ];
 
     const experienceData = [
-        { title: "Associate Cloud DevOps Engineer", company: "QuickMan", period: "April 2026 - Present", image: "/career/quickman.svg" },
-        { title: "Intern Cloud DevOps Engineer", company: "QuickMan", period: "Oct 2025 - March 2026", image: "/career/quickman.svg" },
+        { title: "Associate Cloud DevOps Engineer", company: "QuickMan", period: "Apr 2026 - Present", image: "/career/quickman.svg" },
+        { title: "Intern Cloud DevOps Engineer", company: "QuickMan", period: "Oct 2025 - Mar 2026", image: "/career/quickman.svg" },
         { title: "Web Developer", company: "ASRL General Trading UAE", period: "Aug 2024 - Aug 2025", image: "/career/asrl-trading.svg" },
         { title: "Digital Marketing Executive", company: "Alpha Health Group", period: "May 2021 - Jun 2022", image: "/career/alpha.svg" },
     ];
@@ -53,13 +53,13 @@ export default function Career() {
 
                 <div className="border-t border-theme">
                     {tabs[activeTab].map((item, index) => (
-                        <article key={`${item.title}-${index}`} className="grid gap-5 border-b border-theme py-7 md:grid-cols-[9rem_1fr_5rem] md:items-center">
-                            <div className="text-sm font-semibold uppercase tracking-[0.16em] text-theme-tertiary">
+                        <article key={`${item.title}-${index}`} className="grid gap-5 border-b border-theme py-7 md:grid-cols-[14rem_minmax(0,1fr)_5rem] md:items-center">
+                            <div className="whitespace-nowrap text-sm font-semibold uppercase tracking-[0.16em] text-theme-tertiary">
                                 {item.year || item.period}
                             </div>
                             <div className="flex items-center gap-5">
-                                <div className="flex h-16 w-16 shrink-0 items-center justify-center border border-theme bg-white p-2">
-                                    <img src={item.image} alt="" className="h-full w-full object-contain grayscale" />
+                                <div className="group flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-theme bg-white p-2 transition duration-300 hover:-translate-y-0.5 hover:shadow-lg">
+                                    <img src={item.image} alt="" className="h-full w-full object-contain grayscale transition duration-300 group-hover:grayscale-0" />
                                 </div>
                                 <div>
                                     <h3 className="text-xl font-semibold text-theme-primary">{item.title}</h3>
