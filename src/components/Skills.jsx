@@ -1,15 +1,16 @@
 import { FaAws, FaDocker, FaGitAlt, FaJenkins, FaLinux, FaNodeJs, FaPython } from "react-icons/fa";
-import { SiAnsible, SiGrafana, SiKubernetes, SiPrometheus, SiTerraform } from "react-icons/si";
+import { SiGrafana, SiKubernetes, SiPrometheus, SiTerraform } from "react-icons/si";
+import { VscAzure } from "react-icons/vsc";
 
 export default function Skills() {
     const skills = [
         { name: "Linux", icon: FaLinux },
         { name: "Docker", icon: FaDocker },
         { name: "Kubernetes", icon: SiKubernetes },
+        { name: "Azure", icon: VscAzure },
         { name: "AWS", icon: FaAws },
         { name: "Terraform", icon: SiTerraform },
         { name: "Git", icon: FaGitAlt },
-        { name: "Ansible", icon: SiAnsible },
         { name: "Jenkins", icon: FaJenkins },
         { name: "Python", icon: FaPython },
         { name: "Node.js", icon: FaNodeJs },
@@ -30,15 +31,17 @@ export default function Skills() {
                     </p>
                 </div>
 
-                <div className="grid border-l border-t border-theme sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                <div className="grid border-l border-t border-theme grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                     {skills.map((skill) => (
-                        <div
+                        <button
                             key={skill.name}
-                            className="group flex min-h-36 items-end justify-between border-b border-r border-theme bg-theme-primary p-5 transition-colors hover:bg-theme-secondary"
+                            type="button"
+                            aria-label={`Skill: ${skill.name}`}
+                            className="group flex flex-col items-center justify-center gap-3 min-h-36 border-b border-r border-theme bg-theme-primary p-5 text-center transition transform hover:-translate-y-0.5 hover:shadow-md hover:bg-theme-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-theme-primary"
                         >
-                            <span className="text-lg font-semibold text-theme-primary">{skill.name}</span>
-                            <skill.icon className="text-3xl text-theme-tertiary transition-colors group-hover:text-theme-primary" />
-                        </div>
+                            <skill.icon className="text-4xl sm:text-5xl text-theme-tertiary transition-colors group-hover:text-theme-primary" />
+                            <span className="mt-1 text-lg font-semibold text-theme-primary">{skill.name}</span>
+                        </button>
                     ))}
                 </div>
             </div>
