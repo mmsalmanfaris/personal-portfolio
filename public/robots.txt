@@ -1,0 +1,15 @@
+# robots.txt for https://mmsalmanfaris.digitalpartner.ae
+# Allow all well-behaved bots, point to sitemap and set crawl guidelines.
+
+User-agent: *
+Disallow: /api/
+Disallow: /admin/
+Allow: /
+Crawl-delay: 5
+
+Sitemap: https://mmsalmanfaris.digitalpartner.ae/sitemap.xml
+Host: https://mmsalmanfaris.digitalpartner.ae
+
+# Notes:
+# - Keep sensitive endpoints behind authentication; disallowed above are examples.
+# - If you use server-side routes or extra asset folders, update Disallow rules accordingly.

@@ -1,0 +1,5 @@
+Contact: mailto:security@mmsalmanfaris.digitalpartner.ae
+Encryption: https://mmsalmanfaris.digitalpartner.ae/pgp-key.txt
+Acknowledgements: https://mmsalmanfaris.digitalpartner.ae/security/acknowledgements
+Preferred-Languages: en
+Canonical: https://mmsalmanfaris.digitalpartner.ae/.well-known/security.txt

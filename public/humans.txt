@@ -1,0 +1,12 @@
+/* TEAM */
+Developer: MM Salman Faris
+Role: Cloud Engineer, DevOps Engineer, Freelancer
+Location: UAE
+Contact: mmsalmanfaris@outlook.com
+
+/* SITE */
+Last update: 2026-05-05
+Standards: HTML5, Tailwind CSS, React, Vite
+
+/* THANKS */
+Thanks to open-source projects and community contributors.
